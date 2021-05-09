@@ -1,0 +1,38 @@
+So inorder to find out the diameter wise concentricity we can simply multiply the calling function at file helpermath.cs on line number 2840 which is Cdim class value obtained by
+calling the function MeasureDistance. Since the reference is fixed with any one circle we can simply return the (calculated value by function) * 2.
+
+
+
+Version 3.76
+{
+
+			case RapidEnums::MEASUREMENTTYPE::DIM_CONCENTRICITY:
+			case RapidEnums::MEASUREMENTTYPE::DIM_CONCENTRICITY_D:
+				Cdim = new DimConcentricity(_T("Concen"));
+				Cdim->MeasurementType = CurrentMtype;
+				((DimConcentricity*)Cdim)->CalculateMeasurement(s1, s2);
+				break;	
+
+
+}
+
+New Version would contain something like
+{
+  case RapidEnums::MEASUREMENTTYPE::DIM_CONCENTRICITY:
+			case RapidEnums::MEASUREMENTTYPE::DIM_CONCENTRICITY_D:
+				Cdim = new DimConcentricity(_T("Concen"));
+				Cdim->MeasurementType = CurrentMtype;
+				((DimConcentricity*)Cdim)->2 * CalculateMeasurement(s1, s2);
+				break;	
+
+
+}
+
+
+This is the only thing I suggest because currently my machine is not working.
+So I can't test it.
+
+Next day(Monday) when officials will come then I'll test the code and increase the version control.
+
+The Documentation of this module is going to be like the same because it was the bug reported.
+- Vikas Yadav 
