@@ -48,4 +48,66 @@ Machine is not There so I can't do that today but I'll fix that other day.
   
   
   New Problem due to this:
+  void RWrapper::RW_DRO::GetFocusCalibrationDetails()
+{
+	CalibrationModule::DB ^GetValues = gcnew CalibrationModule::DB(RWrapper::RW_MainInterface::DBConnectionString);
+	try
+	{
+		GetValues->FillTable("FocusScanCalibration");
+		GetValues->FillTable("MeasurementSettings");
+		cli::array<System::Data::DataRow^>^ cbsrows = GetValues->Select_ChildControls("FocusScanCalibration", "MachineNo", RWrapper::RW_DBSettings::MYINSTANCE()->CurrentMachineNumber);
+		cli::array<System::Data::DataRow^>^ mesrows = GetValues->Select_ChildControls("MeasurementSettings", "MachineNo", RWrapper::RW_DBSettings::MYINSTANCE()->CurrentMachineNumber);
+		double CellleftX = 0, CellleftY = 0, Cellwidth = 0, Cellheight = 0, ErrorCorrection;
+		double CalibrateError[4] = {0};
+		
+		if(cbsrows->Length == 0) // Focus Calibration Not Done..
+		{
+			FOCUSCALCOBJECT->FocusCalibrationIsDone(false);
+			FOCUSCALCOBJECT->ApplyFocusCorrection(false);
+		}
+		else
+		{
+			CalibrateError[0] = System::Convert::ToDouble(mesrows[0]->default["X_Shift_FocusCalib"]);
+			CalibrateError[1] = System::Convert::ToDouble(mesrows[0]->default["Y_Shift_FocusCalib"]);
+			CalibrateError[2] = System::Convert::ToDouble(mesrows[0]->default["Deviation1_FocusCalib"]);
+			CalibrateError[3] = System::Convert::ToDouble(mesrows[0]->default["Deviation2_FocusCalib"]);
+			cli::array<int>^ id;
+			cli::array<double>^ error;
+			id = gcnew cli::array<int>(cbsrows->Length);
+			error = gcnew cli::array<double>(cbsrows->Length);
+			std::list<double> ErrorCorrectionValues;
+			for(int i = 0; i < cbsrows->Length; i++)
+			{
+				id[i] = System::Convert::ToInt32(cbsrows[i]->default["FSC_ID"]);
+			/*	CellleftX = System::Convert::ToDouble(cbsrows[i]->default["CellLeftX"]);
+				CellleftY = System::Convert::ToDouble(cbsrows[i]->default["CellLeftY"]);
+				Cellwidth = System::Convert::ToDouble(cbsrows[i]->default["CellWidth"]);
+				Cellheight = System::Convert::ToDouble(cbsrows[i]->default["CellHeight"]);*/
+				error[i] = System::Convert::ToDouble(cbsrows[i]->default["Correction_Z"]);
+				//ErrorCorrection = System::Convert::ToDouble(cbsrows[i]->default["Correction_Z"]);
+				//ErrorCorrectionValues.push_back(ErrorCorrection);				
+			}		
+			for(int i = 0; i < cbsrows->Length ; i++)
+			{
+				for(int j = 0; j < cbsrows->Length - 1 ; j++ )
+				{
+					if(id[j]>id[j+1])
+						{
+							int temp1 = id[j + 1];
+							double temp2 = error[j + 1];
+							id[j+1] = id[j];
+							id[j] = temp1;
+							error[j + 1] = error[j];
+							error[j] = temp2;
+						}
+				}
+			}
+			for(int i = 0; i < cbsrows->Length ; i++)
+					ErrorCorrectionValues.push_back((double)error[i]);	
+			FOCUSCALCOBJECT->FocusCalibrationIsDone(true);
+			FOCUSCALCOBJECT->SetFocusCalibrationValues(&ErrorCorrectionValues, CalibrateError, Cellwidth, Cellheight);
+			//CALBCALCOBJECT->SetCalibrationCorrectionValues(&ErrorCorrectionValues, slipgaugeLength, rcount, ccount);
+		}
+		GetValues->FinalizeClass();
+	}
   
