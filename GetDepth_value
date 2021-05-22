@@ -1,0 +1,27 @@
+bool FocusFunctions::GetDepth_value(double* dval)
+{
+	try
+	{
+		if(CurrentDepthMeasure == NULL) return false;
+		DimDepth* Cdim = (DimDepth*)CurrentDepthMeasure;
+		if(MAINDllOBJECT->MeasureUnitType == RapidEnums::RAPIDUNITS::INCHES)
+			*dval = Cdim->DepthValue()/25.4;
+		else
+			*dval = Cdim->DepthValue();
+		if(Cdim->TwoBoxDepthMeasure())
+		{
+			if(Cdim->ParentShape1 != NULL)
+				return true;
+			else
+				return false;
+		}
+		else
+		{
+			if(Cdim->ParentShape1 != NULL && Cdim->ParentShape2 != NULL)
+				return true;
+			else
+				return false;
+		}
+	}
+	catch(...){ MAINDllOBJECT->SetAndRaiseErrorMessage("FOCUSCALC0015", __FILE__, __FUNCSIG__); }
+}
