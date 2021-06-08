@@ -1,0 +1,2387 @@
+  NewRapidVision.Engine.OglLighting.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly RapidWrapper, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly CalibrationModule, Version=1.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly ErrHandlerApp, Version=2.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly LicensingModuleDLL, Version=2.1.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Class RWrapper.RW_DBSettings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String ProgramPath : Public
+    System.String ReportPath : Public
+    System.String TemplatesPath : Public
+    System.String DROStyle : Public
+    Double ProbeStopValue : Public
+    Double ProbeSpeed : Public
+    Double SpeedX : Public
+    Double SpeedY : Public
+    Double SpeedZ : Public
+    Double SpeedR : Public
+    Double SpeedMinValue : Public
+    Double SpeedMaxValue : Public
+    Double SpeedStepValue : Public
+    Boolean GridProgramModeFlag : Public
+    Boolean RotartAxisPresent : Public
+    Boolean PartialmageModeForOneShot : Public
+    Boolean CheckForTargetReach : Public
+    Int32 MachineTypeEnum : Public
+    Int32 MeasureNoOfDec : Public
+    System.String Camera_Type : Public
+    System.String CurrentMachineNumber : Public
+    System.String CompanyName : Public
+    System.String CompanyLocation : Public
+    System.String SoftwareVersion : Public
+    System.String MachineType : Public
+    System.String DefaultMagnificationLevel : Public
+    System.String ButtonToolTip : Public
+    Boolean AuxilaryLightPresent : Public
+    Boolean CoAxialLightPresent : Public
+    Boolean ElevenXProfilePresent : Public
+    Boolean FiveXLensePresent : Public
+    Boolean ThreeDSoftwareMode : Public
+    Boolean AutoZoomInOutMode : Public
+    System.Collections.Generic.List`1[System.String] SavedLightSettings_NameList : Public
+    Int32 NoOfCards : Public
+    Int32 NoofMachineAxis : Public
+    Int32 Profile_Zone_No : Public
+    Int32 Profile11X_Zone_No : Public
+    Int32 Aux_Zone_No : Public
+    Int32 CoAx_ZoneNo : Public
+    Int32 ProfileLightLevelFor11X : Public
+    System.Collections.Hashtable GradeValueCollection : Public
+    System.Collections.Hashtable GradeLevelCollection : Public
+    System.Collections.Hashtable GradeValueEndCollection : Public
+    System.Collections.Hashtable Grade1ValueCollection : Public
+    System.Collections.Hashtable Grade1ValueEndCollection : Public
+    System.Collections.Hashtable Grade1LevelCollection : Public
+    System.Collections.Hashtable Grade2ValueEndCollection : Public
+    System.Collections.Hashtable Grade2ValueCollection : Public
+    System.Collections.Hashtable Grade2LevelCollection : Public
+    Double FirstGradeValue : Public
+    Double LastGradevalue : Public
+    Double RefDotDia_in_mm : Public
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    InitializeRcadSettings(): PrivateScope, Public, HideBySig
+    SaveLightSettings(String, Int32[]): PrivateScope, Public, HideBySig
+    UpdateSelectedLightValue(String): PrivateScope, Public, HideBySig
+    DeleteSelectedLightValue(String): PrivateScope, Public, HideBySig
+    UpdateProbeApproachGap_Speed(Double, Double): PrivateScope, Public, HideBySig
+    getOneImage_RunTime(String, String, Int32, Int32): PrivateScope, Public, HideBySig
+    GetCursor(String, String): PrivateScope, Public, HideBySig
+    getImageList(String, Int32, Int32): PrivateScope, Public, HideBySig
+    getToolTipList(): PrivateScope, Public, HideBySig
+    getButtonBaseNameList(): PrivateScope, Public, HideBySig
+    getButtonTypeList(): PrivateScope, Public, HideBySig
+    getButtonCheckedPropertyList(): PrivateScope, Public, HideBySig
+    GetMagnificationList(): PrivateScope, Public, HideBySig
+    UpdateVideoPixelWidthForDigitalZoom(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    UpdateVideoPixelWidth(String): PrivateScope, Public, HideBySig
+    UpdateVideoUpp_DROCallback(Double): PrivateScope, Public, HideBySig
+    UpdateCameraZoomLevel(String): PrivateScope, Public, HideBySig
+    GetRValueFromPixelWidth(Double*, Double): PrivateScope, Public, HideBySig
+    GetRValueFromZoomLevel(Double*, Int32): PrivateScope, Public, HideBySig
+    GetPixelWidthFromRValue(Double, Double*): PrivateScope, Public, HideBySig
+    GetZoomLevelFromRValue(Double, Int32*): PrivateScope, Public, HideBySig
+    UpdateCalibrationSettings_CurrentMachine(ArrayList, Int32): PrivateScope, Public, HideBySig
+    UpdateFocusCalibrationSettings_CurrentMachine(ArrayList, Int32): PrivateScope, Public, HideBySig
+    UpdateSphereCalibrationSettings_CurrentMachine(Int32, Int32, Double, Double*): PrivateScope, Public, HideBySig
+    UpdateFocusCalibrationGridSettings_CurrentMachine(ArrayList): PrivateScope, Public, HideBySig
+    UpdateCrosshairOffsets(): PrivateScope, Public, HideBySig
+    UpdateCalibrationSettings(): PrivateScope, Public, HideBySig
+    UpdateSurfaceFGSettings(): PrivateScope, Public, HideBySig
+    UpdateGradeSelection(Int32): PrivateScope, Public, HideBySig
+    FinaliseAll(): PrivateScope, Public, HideBySig
+    SetCameraToCompleteZoom_Exeload(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ProbeParameters: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 AxisLabel : Public
+    Double ApproachDist : Public
+    Double RetractDist : Public
+    Double ApproachSpeed : Public
+    Double RetractSpeed : Public
+Class RWrapper.RW_DRO: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Boolean TakeProbePointFlag : Public
+    Boolean AutoFocusMode_Flag : Public
+    Boolean Is_Delphicam : Public
+    Boolean IsSpuriousTouchPoint : Public
+    Boolean AutoCalibrationMode : Public
+    Boolean LocalisedCalibrationDone : Public
+    Boolean HomingMovementMode : Public
+    Boolean HomingisDone : Public
+    Boolean UpdatingDROTextBox : Public
+    Boolean DontUpdateLocalisedCalibration : Public
+    Boolean DontTakeDroValues : Public
+    Boolean XAxisHomeToPositive : Public
+    Boolean YAxisHomeToPositive : Public
+    Boolean ContourScan_Callibration : Public
+    Int32 XAxisPositiveHomeValue : Public
+    Int32 YAxisPositiveHomeValue : Public
+    Int32 CurrentDROCallBackFlag : Public
+    Int32 RotationalScanCount : Public
+    Double Contour_ScalingCoefficient : Public
+    Double Contour_Reference_Rlevel : Public
+    Double[] Contour_Offset : Public
+    Double[] Contour_AxisOfRotation : Public
+    Int32 GageAlignmentAxis : Public
+    Double[] HardwareVersionNumber : Public
+    Double[] C_AxisErrorTable : Public
+    Boolean* AxisProperty : Public
+    Boolean* AxisLock : Public
+    Boolean SelectProbePointSide : Public
+    Double* OriginalDROCoordinate : Public
+    Double* DROCoordinate : Public
+    Double* ProbeCoordinate : Public
+    Double* feedRate : Public
+    Double* returnPosition : Public
+    Double[] Corrections : Public
+    Int32[] ScaleData : Public
+    Double RevertDistance : Public
+    Double ApproachDistance : Public
+    Double RevertSpeed : Public
+    Double ApproachSpeed : Public
+    Double ProbeSensitivity : Public
+    Double[] DROValue : Public, Static
+    Double[] CurrentUCSDRO : Public, Static
+    Double[] CurrentUCSDRO_IntUse : Public, Static
+    System.String RAxisValue : Public, Static
+    System.String RAxisGradeValue : Public, Static
+  Events:
+    SwivelFinishedEventHandler FinishedSwivelling_A_Axis: SpecialName
+    ZeroingOffsetEventHandler ZeroingOffsetEvent: SpecialName
+    SendCommandAtStartup SendMachineSwitchedOff: SpecialName
+    SendCommandAtStartup SendCommandAcknowledge: SpecialName
+    CameraClickSoundEventHandler CameraSoundEvent: SpecialName
+    PausePartProgramEventHandler PausePartPartProgram: SpecialName
+    TouchedProbeEventHandler TouchedProbePostion: SpecialName
+    DROTargetReachedEventHandler DROTargetReached: SpecialName
+    DROEventHandler DROChanged: SpecialName
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    GetDROSettingsValues(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetLocalisedCalibrationDetails(): PrivateScope, Public, HideBySig
+    GetContourScanCallibrationDetails(): PrivateScope, Public, HideBySig
+    GetFocusCalibrationDetails(): PrivateScope, Public, HideBySig
+    ConnectTo_RapidIhardware(): PrivateScope, Public, HideBySig
+    AxisAngleCorrections(): PrivateScope, Public, HideBySig
+    SetReturnPosition(): PrivateScope, Public, HideBySig
+    Handle_DROCallback(Double*): PrivateScope, Public, HideBySig
+    UpdateDRO_textbox(): PrivateScope, Public, Static, HideBySig
+    UpdateCenterScreen(): PrivateScope, Public, Static, HideBySig
+    DisplayVideoMouseMove(Double*): PrivateScope, Public, HideBySig
+    HandleProbeHitCallback(Int32, Double*): PrivateScope, Public, HideBySig
+    Handle_DROButtonClick(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Raise_DROTargetReached(Int32): PrivateScope, Public, HideBySig
+    Handle_DROTargetReached(Int32): PrivateScope, Public, HideBySig
+    setTargetReachedTypeCallback(TargetReachedCallback): PrivateScope, Public, HideBySig
+    FunctionTargetReached(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetProbePositionInTouch(Int32): PrivateScope, Public, HideBySig
+    RaiseCameraClickSoundEvent(): PrivateScope, Public, HideBySig
+    RaiseTouchedProbePostion(): PrivateScope, Public, HideBySig
+    ResetMachineStuckFlag(): PrivateScope, Public, HideBySig
+    Set2StepPP_Flag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProbeRevertDistSpeed(Int32, Double, Double, Double, Double, Double, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetScaleDirection(Boolean(HasFieldMarshal), Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetMotorDirection(Boolean(HasFieldMarshal), Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetAccuracy(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetDeceleration(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetAcceleration(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetPitch(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetJoysticSpeedFactor(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetResolution(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Activate_DeactivateProbe(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Activate_Deactivate_Zoom_Cnc(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetInterPolationParameter(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProbeReractModeForManual(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetSpeedControls(Int32[]): PrivateScope, Public, HideBySig
+    RetractAlongDirectionOfMovement(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ResetDroValue(Double[], Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    WriteToEEPROM(): PrivateScope, Public, HideBySig
+    SendMachineAtZeroingPosition(Double[]): PrivateScope, Public, HideBySig
+    ResetOffsetPosition(): PrivateScope, Public, HideBySig
+    ConnectOnlineSystem(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+    add_DROChanged(DROEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DROChanged(DROEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DROTargetReached(DROTargetReachedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DROTargetReached(DROTargetReachedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_TouchedProbePostion(TouchedProbeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_TouchedProbePostion(TouchedProbeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_PausePartPartProgram(PausePartProgramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PausePartPartProgram(PausePartProgramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_CameraSoundEvent(CameraClickSoundEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CameraSoundEvent(CameraClickSoundEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_SendCommandAcknowledge(SendCommandAtStartup): PrivateScope, Public, HideBySig, SpecialName
+    remove_SendCommandAcknowledge(SendCommandAtStartup): PrivateScope, Public, HideBySig, SpecialName
+    add_SendMachineSwitchedOff(SendCommandAtStartup): PrivateScope, Public, HideBySig, SpecialName
+    remove_SendMachineSwitchedOff(SendCommandAtStartup): PrivateScope, Public, HideBySig, SpecialName
+    add_ZeroingOffsetEvent(ZeroingOffsetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ZeroingOffsetEvent(ZeroingOffsetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FinishedSwivelling_A_Axis(SwivelFinishedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FinishedSwivelling_A_Axis(SwivelFinishedEventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class RWrapper.RW_DRO+DROEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+DROTargetReachedEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+TouchedProbeEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+PausePartProgramEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+CameraClickSoundEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+SendCommandAtStartup: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+ZeroingOffsetEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double[]): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double[], AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DRO+SwivelFinishedEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CNC: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Boolean CNCmode : Public
+    Boolean RefDotCamMode : Public
+    Double RotaryScanSpan : Public
+    Double RotaryScanSpeed : Public
+    Int32[] CurrentLightProperty : Public
+    System.String CurrentOnlineSystemState : Public
+  Events:
+    CNCModeChangeEventHandler CNCModeChange_Event: SpecialName
+    TakeProbePointEventHandler GotoProbePointEvent: SpecialName
+    AxisLockEventHandler AxisLockevent: SpecialName
+    CNCEventHandler LightCommandUpdated: SpecialName
+    CNCEventHandler CNCCommandTargetReached: SpecialName
+    CNCButtonClickEventHandler GenerateCNCBtnClick: SpecialName
+  Methods:
+    add_GenerateCNCBtnClick(CNCButtonClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GenerateCNCBtnClick(CNCButtonClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_CNCCommandTargetReached(CNCEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CNCCommandTargetReached(CNCEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_LightCommandUpdated(CNCEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_LightCommandUpdated(CNCEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_AxisLockevent(AxisLockEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_AxisLockevent(AxisLockEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GotoProbePointEvent(TakeProbePointEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GotoProbePointEvent(TakeProbePointEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_CNCModeChange_Event(CNCModeChangeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CNCModeChange_Event(CNCModeChangeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SetCNCFeedRate(Double[]): PrivateScope, Public, HideBySig
+    Activate_AbortDRO(): PrivateScope, Public, HideBySig
+    Activate_CNCModeDRO(): PrivateScope, Public, HideBySig
+    Activate_ManualModeDRO(): PrivateScope, Public, HideBySig
+    Lock_Axis(String): PrivateScope, Public, HideBySig
+    Unlock_Axis(String): PrivateScope, Public, HideBySig
+    getCNCMode(): PrivateScope, Public, HideBySig
+    IsLightUpdating(): PrivateScope, Public, HideBySig
+    Start_ZoomInOut(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Stop_ZoomInOut(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetLightValue(Int32[]): PrivateScope, Public, HideBySig
+    CalcualteSurfaceorProfileLight(Int32[]): PrivateScope, Public, HideBySig
+    SwitchOnOffLight(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    UpdateLight(Int32[]): PrivateScope, Public, HideBySig
+    LightCallbackFromDRO(SByte*): PrivateScope, Public, HideBySig
+    ConvertLightValueToInt(String): PrivateScope, Public, HideBySig
+    UpdateLightStatusAfterClear(): PrivateScope, Public, HideBySig
+    UpdateLight_ForZoomChange(): PrivateScope, Public, HideBySig
+    RaiseCNCEvents(Int32): PrivateScope, Public, HideBySig
+    RaiseCNCModeChanged(Int32): PrivateScope, Public, HideBySig
+    SendDROToGetProbePoint(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GotoPosition(String[]): PrivateScope, Public, HideBySig
+    GoBackToOldPosition(): PrivateScope, Public, HideBySig
+    MovetoPosition(String[]): PrivateScope, Public, HideBySig
+    MoveToC_Axis_Y_Position(): PrivateScope, Public, HideBySig
+    Swivel_A_Axis(): PrivateScope, Public, HideBySig
+    MoveProbeToVisionPosition(): PrivateScope, Public, HideBySig
+    SendDROGotoPosition(Double*, Double*, TargetReachedCallback): PrivateScope, Public, HideBySig
+    GotoCommandforCircularMovement(Double[], Double[], Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartCircularMovement(Double[], Double[], Int32): PrivateScope, Public, HideBySig
+    MoveCircularStep(): PrivateScope, Public, HideBySig
+    Lock_AxisMovement(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    RaiseGotoProbePointEvent(Double*): PrivateScope, Public, HideBySig
+    RotateCAxis360(): PrivateScope, Public, HideBySig
+    RotateAAxis(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    OperateStep(Int32, Int32): PrivateScope, Public, HideBySig
+    MoveTable(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Double): PrivateScope, Public, HideBySig
+    StopOnlineSystem(): PrivateScope, Public, HideBySig
+    Reset_PrevTarget(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_CNC+CNCButtonClickEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CNC+CNCEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CNC+AxisLockEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CNC+TakeProbePointEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CNC+CNCModeChangeEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_SuperImposeImage: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    InitialiseGrid(): PrivateScope, Public, HideBySig
+    IncrementGridSelection(): PrivateScope, Public, HideBySig
+    StartCNC(): PrivateScope, Public, HideBySig
+    ClearGrid(): PrivateScope, Public, HideBySig
+    SetTopLeft(Double, Double): PrivateScope, Public, HideBySig
+    SetBottomRight(Double, Double): PrivateScope, Public, HideBySig
+    StartImageCapturingInGrid(): PrivateScope, Public, HideBySig
+    MachineGotoHomePosition(): PrivateScope, Public, HideBySig
+    SetFolderPath(String): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_PCD: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.Collections.Generic.List`1[System.String] AddShapeMemberNameList : Public
+    System.Collections.Generic.List`1[System.String] PCDMemberNameList : Public
+  Events:
+    PCDEventHandler PCDMeasureSelectionChanged: SpecialName
+  Methods:
+    add_PCDMeasureSelectionChanged(PCDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PCDMeasureSelectionChanged(PCDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    NewClicked(): PrivateScope, Public, HideBySig
+    PCD_MeasurementClicked(): PrivateScope, Public, HideBySig
+    Circle_Added(String): PrivateScope, Public, HideBySig
+    Circle_Remove(String): PrivateScope, Public, HideBySig
+    GetPCDMeasureList(): PrivateScope, Public, HideBySig
+    ClearLastPCDValues(): PrivateScope, Public, HideBySig
+    GetSelectedPCDParameters(): PrivateScope, Public, HideBySig
+    ResetAllPCD(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_PCD+PCDEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_FocusDepth: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 FramescanCount : Public
+    Int32 FocusdepthStepCnt : Public
+    Boolean AutoFocusMode : Public
+    Boolean FillFocusBox : Public
+    Boolean Focusflag : Public
+    Double focusSpan : Public
+    Double focusSpeed : Public
+    Double FocusValue : Public
+    Double MoveX : Public
+    Double MoveY : Public
+    Double MoveZ : Public
+    Boolean FocusClickEventRaised : Public
+    Double[] NextCellPosTemp : Public
+    System.String CurrentFocusValue : Public
+    System.String CurrentDepthValue : Public
+    System.String CurrentDepthZ1Value : Public
+    System.String CurrentDepthZ2Value : Public
+    Int32 Zx1 : Public
+    Int32 Zx2 : Public
+    Int32 Zy1 : Public
+    Int32 Zy2 : Public
+    Int32 DZx : Public
+    Int32 DZy : Public
+  Events:
+    FocusEventHandler UpdateDepthValues: SpecialName
+    FocusEventHandler UpdateZ2DepthValue: SpecialName
+    FocusEventHandler UpdateZ1DepthValue: SpecialName
+    FocusEventHandler DepthShapeRemoved: SpecialName
+    FocusEventHandler DepthShapeAdded: SpecialName
+    FocusEventHandler FocusFinished: SpecialName
+    FocusEventHandler FocusValueChanged: SpecialName
+    FocusButtonClickEventHandler GenerateFocusBtnClick: SpecialName
+  Methods:
+    add_GenerateFocusBtnClick(FocusButtonClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GenerateFocusBtnClick(FocusButtonClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FocusValueChanged(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FocusValueChanged(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FocusFinished(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FocusFinished(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DepthShapeAdded(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DepthShapeAdded(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DepthShapeRemoved(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DepthShapeRemoved(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateZ1DepthValue(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateZ1DepthValue(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateZ2DepthValue(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateZ2DepthValue(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateDepthValues(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateDepthValues(FocusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    FocusClicked(): PrivateScope, Public, HideBySig
+    StartFocus(): PrivateScope, Public, HideBySig
+    AbortClicked(): PrivateScope, Public, HideBySig
+    ShowHideFocus(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    NewClicked(): PrivateScope, Public, HideBySig
+    SetZ1Clicked(): PrivateScope, Public, HideBySig
+    SetZ2Clicked(): PrivateScope, Public, HideBySig
+    SetFocusRectangleProperties(Double, Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    SetSelectedAxis(Int32): PrivateScope, Public, HideBySig
+    GetSelectedAxis(): PrivateScope, Public, HideBySig
+    FillFocusValueInFrontend(Double): PrivateScope, Public, HideBySig
+    Update_FocusDepthValues(): PrivateScope, Public, HideBySig
+    FocusResetClicked(): PrivateScope, Public, HideBySig
+    DepthResetClicked(): PrivateScope, Public, HideBySig
+    SelectDepthDatum(Int32): PrivateScope, Public, HideBySig
+    RaiseFocusEvents(Int32): PrivateScope, Public, HideBySig
+    DoFocusCalibration(Double, Double, Double, Int32, Int32, Int32, Int32, Int32, Double, Double): PrivateScope, Public, HideBySig
+    FocusCalibration_NextRegion(): PrivateScope, Public, HideBySig
+    UpdateFocusCalibration(): PrivateScope, Public, HideBySig
+    Start_AutoFocusScan(): PrivateScope, Public, HideBySig
+    Continue_AutoFocusScan(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Stop_AutoFocusScan(): PrivateScope, Public, HideBySig
+    Rotate_AutoFocusScan(Double, Int32): PrivateScope, Public, HideBySig
+    Start_AutoContourScan(): PrivateScope, Public, HideBySig
+    Continue_AutoContourScan(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Stop_AutoContourScan(): PrivateScope, Public, HideBySig
+    Rotate_AutoContourScan(Double, Int32): PrivateScope, Public, HideBySig
+    AFS_GotoNextScanPosition(): PrivateScope, Public, HideBySig
+    AFS_ScanCurrentPosition(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetShapeForDepth(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_FocusDepth+FocusButtonClickEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_FocusDepth+FocusEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_FixedGraph: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double CenterX : Public
+    Double CenterY : Public
+    Double Radius : Public
+    Double Angle : Public
+    Double Offset : Public
+    Double lineType : Public
+    Boolean Hatched : Public
+    Boolean DontClear : Public
+    Boolean NonClearable : Public
+    Boolean Circle_DiameterType : Public
+    Boolean Line_FromOrigin : Public
+    Boolean Line_ThroughOrigin : Public
+    Boolean Line_Xoffset : Public
+    Boolean Line_Yoffset : Public
+    Boolean NudgeFixedGraphics : Public
+    Double TextAngle : Public
+    System.String CurrentText : Public
+    System.String FixedShapeName : Public
+    FixedGraphBox currentFixedGraph : Public
+    System.Collections.Hashtable FixedShapeCollection : Public
+  Events:
+    FixedGraphEventHandler UpdateSelectedShapeParam: SpecialName
+    FixedGraphEventHandler ClearFixedShapeSelection: SpecialName
+  Methods:
+    add_ClearFixedShapeSelection(FixedGraphEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ClearFixedShapeSelection(FixedGraphEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateSelectedShapeParam(FixedGraphEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateSelectedShapeParam(FixedGraphEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    HandleFixedGraphics(String): PrivateScope, Public, HideBySig
+    AddFixedShape(Int32): PrivateScope, Public, HideBySig
+    SelectFixedShape(String): PrivateScope, Public, HideBySig
+    RemoveSelected(String): PrivateScope, Public, HideBySig
+    ChangeColor_Seletecd(): PrivateScope, Public, HideBySig
+    CircleParameterChanged(Double, Double, Double, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    LineParameterChanged(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Double, Double): PrivateScope, Public, HideBySig
+    TextParameterChanged(String, Double): PrivateScope, Public, HideBySig
+    ChangeFont(): PrivateScope, Public, HideBySig
+    Nudge_SelectedFixedShape(): PrivateScope, Public, HideBySig
+    NudgeFixedShape(Double, Double): PrivateScope, Public, HideBySig
+    ClearFixedGraph(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ClearCurrentSelectedShape(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_FixedGraph+FixedGraphEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 NumberOfCommandSend : Public
+    Int32 InterPolationCommandCount : Public
+    Boolean RunningFailedAction : Public
+    Boolean ReferenceModeF : Public
+    Boolean ReturnTohomePosition : Public
+    Boolean PartProgramPaused : Public
+    Boolean ProgramMode : Public
+    Boolean AutoFocusDuringPartprogram : Public
+    Boolean RunStepsOneByOne : Public
+    Boolean BatchOfCommandCompleted : Public
+    System.Data.DataTable ProgramStepTable : Public
+    Double* HomePosition : Public
+    System.Collections.Generic.List`1[System.Int32] FailedActionIdList : Public
+    Boolean SingleComponentinOneShot : Public
+    Int32 SameCommand : Public
+    Boolean CNC_Assisted_Mode : Public
+  Events:
+    ChangeZoom ChangeZoomSelection: SpecialName
+    PPRunCount GridRunCountEvent: SpecialName
+    PP_ParameterResetEventHandler PP_ParamResetEvent: SpecialName
+    MeasureUnitEventHandler UpdateMeasureUnit: SpecialName
+    PPImageEventHandler MoveImageEvent: SpecialName
+    PartprogramEventHandler BuildProgramCompleted: SpecialName
+    PartprogramEventHandler GenerateProgramReport: SpecialName
+    PartprogramEventHandler RunIsnotValid: SpecialName
+    PartprogramEventHandler RuntheProgramAgain: SpecialName
+    PartprogramEventHandler UpdateProgramStep: SpecialName
+  Methods:
+    add_UpdateProgramStep(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateProgramStep(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RuntheProgramAgain(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RuntheProgramAgain(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RunIsnotValid(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RunIsnotValid(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GenerateProgramReport(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GenerateProgramReport(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_BuildProgramCompleted(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_BuildProgramCompleted(PartprogramEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_MoveImageEvent(PPImageEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_MoveImageEvent(PPImageEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateMeasureUnit(MeasureUnitEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateMeasureUnit(MeasureUnitEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_PP_ParamResetEvent(PP_ParameterResetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PP_ParamResetEvent(PP_ParameterResetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GridRunCountEvent(PPRunCount): PrivateScope, Public, HideBySig, SpecialName
+    remove_GridRunCountEvent(PPRunCount): PrivateScope, Public, HideBySig, SpecialName
+    add_ChangeZoomSelection(ChangeZoom): PrivateScope, Public, HideBySig, SpecialName
+    remove_ChangeZoomSelection(ChangeZoom): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SaveCurrentDROValue(): PrivateScope, Public, HideBySig
+    UpdateProgramStepsTable(): PrivateScope, Public, HideBySig
+    UpdateProgramStepsTableForEdit(): PrivateScope, Public, HideBySig
+    UpdateCurrentPPStepStatus(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    PartProgram_EditAlign(String): PrivateScope, Public, HideBySig
+    PartProgram_Build(String): PrivateScope, Public, HideBySig
+    PartProgram_ContinueBuild(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    PartProgram_Load(String): PrivateScope, Public, HideBySig
+    PartProgram_Edit(String): PrivateScope, Public, HideBySig
+    PartProgram_Run(): PrivateScope, Public, HideBySig
+    PartProgram_GridRun(): PrivateScope, Public, HideBySig
+    PartProgram_Pause(): PrivateScope, Public, HideBySig
+    PartProgram_Continue(): PrivateScope, Public, HideBySig
+    PartProgram_Stop(): PrivateScope, Public, HideBySig
+    PartProgram_HomePosition(): PrivateScope, Public, HideBySig
+    OneShotpartprogramRun(): PrivateScope, Public, HideBySig
+    Handle_Program_btnClicks(String): PrivateScope, Public, HideBySig
+    StartPartProgramRun(): PrivateScope, Public, HideBySig
+    HandlePartprogram(): PrivateScope, Public, HideBySig
+    SendCurrentStepLightCommand(SByte*): PrivateScope, Public, HideBySig
+    CalculateAndMovetoPosition(Int32): PrivateScope, Public, HideBySig
+    TakeProbePoint(): PrivateScope, Public, HideBySig
+    PartProgramFinished(): PrivateScope, Public, HideBySig
+    ResetGridProgramCount(): PrivateScope, Public, HideBySig
+    Rerun_Program(): PrivateScope, Public, HideBySig
+    Abort_PartProgram(): PrivateScope, Public, HideBySig
+    GetFeatureLIst(): PrivateScope, Public, HideBySig
+    ContinuePartProgram_AfterUserInteraction(): PrivateScope, Public, HideBySig
+    RaisePP_ParamResetEvent(PROGRAM_PARAMETER): PrivateScope, Public, HideBySig
+    SetToleranceValueForDeviation(Double, Double): PrivateScope, Public, HideBySig
+    SetOffsetForRelativePoint(Double, Double, Double): PrivateScope, Public, HideBySig
+    RunFailedAction(): PrivateScope, Public, HideBySig
+    GetActionListOfOutTolMeasure(): PrivateScope, Public, HideBySig
+    SetPointsDirectoryPath(String): PrivateScope, Public, HideBySig
+    SendCommandInBatch(): PrivateScope, Public, HideBySig
+    SaveImageRectangleExtent(): PrivateScope, Public, HideBySig
+    GetDelphiPPSuccessStatus(): PrivateScope, Public, HideBySig
+    LoadReferecneImage_OneShot(String): PrivateScope, Public, HideBySig
+    SetLightChangeValue(Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_PartProgram+PartprogramEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram+MeasureUnitEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram+PP_ParameterResetEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(PROGRAM_PARAMETER): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(PROGRAM_PARAMETER, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram+PPImageEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram+PPRunCount: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_PartProgram+ChangeZoom: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Struct RapidDxfListener: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+Class RWrapper.RW_Thread: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String ThreadMajorDia : Public
+    System.String ThreadMinorDia : Public
+    System.String ThreadEffDiaG : Public
+    System.String ThreadEffDiaM : Public
+    System.String ThreadPitch : Public
+    System.String ThreadAngle : Public
+    System.String ThreadTopRadius : Public
+    System.String ThreadRootRadius : Public
+    System.String ThreadPitchDia : Public
+    Int32 CurrentMeasureThCount : Public
+    Boolean MajorMinorDiaMode : Public
+    System.Data.DataTable ThreadMeasureTable : Public
+  Events:
+    ThreadEventHandler ThreadMeasureSelectionChanged: SpecialName
+    ThreadEventHandler DisableMajorMinorDiaControl: SpecialName
+  Methods:
+    add_DisableMajorMinorDiaControl(ThreadEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DisableMajorMinorDiaControl(ThreadEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ThreadMeasureSelectionChanged(ThreadEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ThreadMeasureSelectionChanged(ThreadEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    IncludeMajorMinorDia(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ExternalThread(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    NewClicked(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    UpdateThreadCountChange(Int32, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    UpdateThreadGraphics(): PrivateScope, Public, HideBySig
+    CalculateThreadMeasurement(): PrivateScope, Public, HideBySig
+    GetSelectedThreadParameters(): PrivateScope, Public, HideBySig
+    OnThreadLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnThreadMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnThreadMouseEnter(): PrivateScope, Public, HideBySig
+    OnThreadMouseLeave(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_Thread+ThreadEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_LaserComm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    InitialisePortComm(): PrivateScope, Public, HideBySig
+    SendDataTOPort(String): PrivateScope, Public, HideBySig
+    ClosePortCommunication(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_AutoCalibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.Collections.Generic.List`1[System.String] MachineTypeColl : Public
+    System.Collections.Generic.List`1[System.String] SlipGaugeTypeColl : Public
+    Double SlipGaugeWidth_Frame : Public
+    Boolean DoSingleFramePerSide : Public
+  Events:
+    CalibrationEventHandler ResetButtonState: SpecialName
+    CalibrationEventHandler DisableButtonState: SpecialName
+  Methods:
+    add_DisableButtonState(CalibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DisableButtonState(CalibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ResetButtonState(CalibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ResetButtonState(CalibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    Handle_ResetDROClicked(): PrivateScope, Public, HideBySig
+    Handle_SetMachineType(String): PrivateScope, Public, HideBySig
+    Handle_SetSlipGaugeWidth(String): PrivateScope, Public, HideBySig
+    Handle_CheckBoxChanged(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Handle_RunClicked(): PrivateScope, Public, HideBySig
+    Handle_StopClicked(): PrivateScope, Public, HideBySig
+    Handle_MeasureWidthClicked(): PrivateScope, Public, HideBySig
+    Handle_MeasureSlipGaugeWidthClicked(): PrivateScope, Public, HideBySig
+    Handle_MeasureSlipGaugeWidthOnClick(Int32): PrivateScope, Public, HideBySig
+    Handle_CalibrateClicked(): PrivateScope, Public, HideBySig
+    Handle_DoneClicked(): PrivateScope, Public, HideBySig
+    Handle_ClearClicked(): PrivateScope, Public, HideBySig
+    Handle_CloseClicked(): PrivateScope, Public, HideBySig
+    GoToPreviousAction(RAction*): PrivateScope, Public, HideBySig
+    GoToNextAction(RAction*, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    FinishedMeasurement(): PrivateScope, Public, HideBySig
+    FrameGrabPoints_WidthMeasure(): PrivateScope, Public, HideBySig
+    FrameGrabPointsToSelectedLine(): PrivateScope, Public, HideBySig
+    GotoNextStep_WidthMeasurement(): PrivateScope, Public, HideBySig
+    GotoNextStep(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartNextOrientation(): PrivateScope, Public, HideBySig
+    Reset_Status(): PrivateScope, Public, HideBySig
+    Handle_HomeClicked(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ReachedHomePosition(): PrivateScope, Public, HideBySig
+    ReachedNearHomePosition(): PrivateScope, Public, HideBySig
+    ReachedTargetPosition(): PrivateScope, Public, HideBySig
+    SetMeasurementAsMedian(Boolean(HasFieldMarshal), Double): PrivateScope, Public, HideBySig
+    SetOverlapWidth(Double): PrivateScope, Public, HideBySig
+    GotoLastPostion(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_AutoCalibration+CalibrationEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_ShapeParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 Shape_EntityID : Public
+    System.Collections.Generic.List`1[System.Int32] SelectedShapeIDList : Public
+    System.Data.DataTable ShapeParameterTable : Public
+    System.Data.DataTable ShapePointsTable : Public
+    System.Collections.ArrayList ShapeParameter_ArrayList : Public, Static
+  Events:
+    SelectFgPtEventHandler ShowFgPtListEvent: SpecialName
+    ShapeParameterEventHandler ShapeParameterUpdate: SpecialName
+  Methods:
+    add_ShapeParameterUpdate(ShapeParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShapeParameterUpdate(ShapeParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowFgPtListEvent(SelectFgPtEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowFgPtListEvent(SelectFgPtEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    GetTotal_ShapeList(): PrivateScope, Public, HideBySig
+    GetShapeList(): PrivateScope, Public, HideBySig
+    SetShapeParam(SByte*, SByte*, Double, SByte*): PrivateScope, Public, HideBySig
+    SetShapeValues(Double*): PrivateScope, Public, HideBySig
+    SetShapeParameters(String, String, String, String, String, String, String, String): PrivateScope, Public, HideBySig
+    SetShapeProperties(Shape*): PrivateScope, Public, HideBySig
+    SetShapeParamForTable(): PrivateScope, Public, HideBySig
+    ResetShapePointsTable(): PrivateScope, Public, HideBySig
+    RaiseShapeChangedEvents(RW_SHAPEPARAMTYPE): PrivateScope, Public, HideBySig
+    UpdateSelectedShape_PointsTable(): PrivateScope, Public, HideBySig
+    SetShapeParamForFrontend(Shape*): PrivateScope, Public, HideBySig
+    SelectShape(Int32[]): PrivateScope, Public, HideBySig
+    SelectShape(Int32): PrivateScope, Public, HideBySig
+    SelectPointsList(Int32[]): PrivateScope, Public, HideBySig
+    DeleteSelectedShape(): PrivateScope, Public, HideBySig
+    DeleteSelectedPointsList(): PrivateScope, Public, HideBySig
+    GotoSelectedPtPosition(): PrivateScope, Public, HideBySig
+    RenameShape(String): PrivateScope, Public, HideBySig
+    SetTextValue_TextShape(String): PrivateScope, Public, HideBySig
+    ShowFgPointsEvent(List`1): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_ShapeParameter+ShapeParameterEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_SHAPEPARAMTYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_SHAPEPARAMTYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_ShapeParameter+SelectFgPtEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(List`1): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(List`1, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MeasureParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.Data.DataTable MeasurementParamTable : Public
+    System.Collections.Generic.List`1[System.Collections.ArrayList] MeasureParameter_ArrayList : Public
+    System.Collections.Generic.List`1[System.Int32] SelectedMeasureIDList : Public
+    Int32 Measure_EntityID : Public
+    System.String CurrentGradeValue : Public
+    Double[] HobMeasurements : Public
+  Events:
+    MeasurementParameterEventHandler MeasureParamUpdateEvent: SpecialName
+  Methods:
+    add_MeasureParamUpdateEvent(MeasurementParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_MeasureParamUpdateEvent(MeasurementParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    GetTotal_MeasurementList(): PrivateScope, Public, HideBySig
+    DelphiAngleMeasurementList(): PrivateScope, Public, HideBySig
+    GetTotal_MeasurementListWithNT(): PrivateScope, Public, HideBySig
+    GetTotal_MeasurementListWithNTHobChecker(Int32): PrivateScope, Public, HideBySig
+    GetMeasurementTable(): PrivateScope, Public, HideBySig
+    GetMeasurementTableWithDelphi(): PrivateScope, Public, HideBySig
+    GetMeasurementTableWithNT(): PrivateScope, Public, HideBySig
+    SetDimensionForExcel(String, String, String, ArrayList): PrivateScope, Public, HideBySig
+    SetDimensionForExcelWithNT(String, String, Int32, Double, Double, Double, String, Boolean(HasFieldMarshal), Int32, String, List`1): PrivateScope, Public, HideBySig
+    SetDimensionForExcelWithNT(String, String, String, Double, Double, Double, String, Boolean(HasFieldMarshal), Int32, String, List`1): PrivateScope, Public, HideBySig
+    SetDimensionForExcelWithNT(String, String, Int32, Double, Double, Double, Int32, Boolean(HasFieldMarshal), Int32, String, List`1): PrivateScope, Public, HideBySig
+    SetDimensionForExcelWithNT(String, String, String, Double, Double, Double, Int32, Boolean(HasFieldMarshal), Int32, String, List`1): PrivateScope, Public, HideBySig
+    SelectMeasurement(Int32[]): PrivateScope, Public, HideBySig
+    SelectMeasurement(Int32): PrivateScope, Public, HideBySig
+    DeleteSelectedMesurement(): PrivateScope, Public, HideBySig
+    RenameMeasurement(String, Int32): PrivateScope, Public, HideBySig
+    RenameMeasurement(String): PrivateScope, Public, HideBySig
+    Change_MeasurementFontSize(Int32): PrivateScope, Public, HideBySig
+    SetMeasureNominalTolerance(Double, Double, Double, Int32): PrivateScope, Public, HideBySig
+    SetMeasureNominalTolerance(Double, Double, Double): PrivateScope, Public, HideBySig
+    SetMeasureIncludePF(Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    SetMeasurementUnit(Int32): PrivateScope, Public, HideBySig
+    SetAngleMeasureMode(Int32): PrivateScope, Public, HideBySig
+    ZPositionof3DpointforTVSCircleCen(Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    AddMeasurementParameter(BaseItem*): PrivateScope, Public, HideBySig
+    RaiseMeasurementEvent(RW_MEASUREPARAM_TYPE): PrivateScope, Public, HideBySig
+    SelectedMeasurementParameter(RCollectionBase*): PrivateScope, Public, HideBySig
+    SetMeasurementParamForTable(): PrivateScope, Public, HideBySig
+    CurrentAngleMeasureMode(): PrivateScope, Public, HideBySig
+    Convert_AngleFormat(Double, Int32, String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_MeasureParameter+MeasurementParameterEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_MEASUREPARAM_TYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_MEASUREPARAM_TYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_UCSParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Boolean SelectingDxfMode : Public
+    System.Windows.Input.Cursor VideoCursor : Public
+    System.Windows.Input.Cursor RcadCursor : Public
+    System.Windows.Input.Cursor DxfCursor : Public
+    System.Windows.Input.Cursor PartprogramCursor : Public
+  Events:
+    CursorTypeEventHandler RapidCursorChanged: SpecialName
+    DXFParamEventHandler DxfUpdateEvent: SpecialName
+    UCSParamEventHandler UcsUpdateEvent: SpecialName
+  Methods:
+    add_UcsUpdateEvent(UCSParamEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UcsUpdateEvent(UCSParamEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DxfUpdateEvent(DXFParamEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DxfUpdateEvent(DXFParamEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RapidCursorChanged(CursorTypeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RapidCursorChanged(CursorTypeEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SelectDXF(Int32): PrivateScope, Public, HideBySig
+    DeleteDXF(Int32): PrivateScope, Public, HideBySig
+    SelectUCS(Int32): PrivateScope, Public, HideBySig
+    InitialilseGrid(Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    RaiseUCSChangedEvents(RW_UCSPARAMETER_TYPE): PrivateScope, Public, HideBySig
+    RaiseDXFChangedEvents(RW_DXFPARAMETER_TYPE): PrivateScope, Public, HideBySig
+    UpdateCursor_AccordingToWindowNo(RW_WINDOWTYPE, RW_CURSORTYPE): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_UCSParameter+UCSParamEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_UCSPARAMETER_TYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_UCSPARAMETER_TYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_UCSParameter+DXFParamEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_DXFPARAMETER_TYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_DXFPARAMETER_TYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_UCSParameter+CursorTypeEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_WINDOWTYPE, RW_CURSORTYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_WINDOWTYPE, RW_CURSORTYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.OglLighting: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    InitializeComponent(): PrivateScope, Public, HideBySig
+    BtnUpdate_Click(Object, EventArgs): PrivateScope, Public, HideBySig
+Class RWrapper.RW_DrawGraphicsText: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    Draw_NormalString(Int32, String, String, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    Initialise_RapidFontDefaultProperty(RGraphicsFont*): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_Probe_Entity: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String PtType : Public
+    Double Val1 : Public
+    Double Val2 : Public
+    Double Val3 : Public
+Class RWrapper.RW_Probe_Path_Entity: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Pt_X : Public
+    Double Pt_Y : Public
+    Double Pt_Z : Public
+    Double Feed_X : Public
+    Double Feed_Y : Public
+    Double Feed_Z : Public
+    Double Revert_Dist : Public
+    Double Revert_Speed : Public
+    Boolean PathPt : Public
+Class RWrapper.RW_FixtureCalibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 TotalRows : Public
+    Int32 TotalColumns : Public
+    Double CellWidth : Public
+    Double CellHeight : Public
+    Boolean FixtureAutomatedCallibration : Public
+    Boolean PointOfRotationFlag : Public
+    Boolean FixtureCalibValues_Loaded : Public
+    System.Collections.Generic.List`1[System.Double] CorrectionList : Public
+    System.String CurrentFixureName : Public
+    Double[] PointOfRotation : Public
+  Events:
+    Fixture_ReferencePointTakenEventHandler Fixture_RferencePointEvent: SpecialName
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    Check_CallibrationInstance(): PrivateScope, Public, Static, HideBySig
+    Close_CallibrationWindow(): PrivateScope, Public, Static, HideBySig
+    add_Fixture_RferencePointEvent(Fixture_ReferencePointTakenEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Fixture_RferencePointEvent(Fixture_ReferencePointTakenEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    StartFixtureCallibration(): PrivateScope, Public, HideBySig
+    getFixtureName(String): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    SetFixtureCallibrationMode(): PrivateScope, Public, HideBySig
+    StartAutomatedFixtureCallibration(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Create_New_Framgrab(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    get_Shape_Parameter(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    get_FramGrab_Parameter(): PrivateScope, Public, HideBySig
+    TakeReferencePoint_FixtureCallibration(): PrivateScope, Public, HideBySig
+    ReadCorrectionValues(): PrivateScope, Public, HideBySig
+    UpdateFixureDetails_Frontend(String, Int32, Int32, Double, Double): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_FixtureCalibration+Fixture_ReferencePointTakenEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_VBlockCallibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Events:
+    VblockCallibrationEventHandler VblockCallibrationCompletedEvent: SpecialName
+  Methods:
+    add_VblockCallibrationCompletedEvent(VblockCallibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_VblockCallibrationCompletedEvent(VblockCallibrationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    create_AngleBisector(): PrivateScope, Public, HideBySig
+    Get_ZvalueOfCylinderAxis(): PrivateScope, Public, HideBySig
+    Handle_AxisLock(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    Create_AxisLine(Double): PrivateScope, Public, HideBySig
+    SetCylinderRadius(Double, Boolean(HasFieldMarshal), Double, Double): PrivateScope, Public, HideBySig
+    create_Line(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetFocus_Zvalue(): PrivateScope, Public, HideBySig
+    GotoCommandForVblock(Int32): PrivateScope, Public, HideBySig
+    ContinuePauseVblockCallibration(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_VBlockCallibration+VblockCallibrationEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.ProbePathPoint: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Pt_X : Public
+    Double Pt_Y : Public
+    Double Pt_Z : Public
+    Boolean path : Public
+    Boolean circularPath : Public
+    Boolean changeZ : Public
+    Double circlel : Public
+    Double circlem : Public
+    Double circlen : Public
+    Int32 ProbeDir : Public
+Class RWrapper.RW_SphereCalibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Boolean DoingCalibration : Public
+    Boolean TakeProbeHit : Public
+    Boolean CircularInterpolation : Public
+    Boolean instantiated : Public, Static
+  Events:
+    FinishedSphereCycleHandler FinishedSphereEvent: SpecialName
+    ProbeOffsetEventHandler ProbeOffsetEvent: SpecialName
+    PointsCountEventHandler PointsCountEvent: SpecialName
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    add_PointsCountEvent(PointsCountEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PointsCountEvent(PointsCountEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ProbeOffsetEvent(ProbeOffsetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProbeOffsetEvent(ProbeOffsetEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FinishedSphereEvent(FinishedSphereCycleHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FinishedSphereEvent(FinishedSphereCycleHandler): PrivateScope, Public, HideBySig, SpecialName
+    SendDrotoNextposition(): PrivateScope, Public, HideBySig
+    SendDrotoTakeNextPoint(): PrivateScope, Public, HideBySig
+    StartSphereCallibration(Double[], Int32, Int32, Int32, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ProbeHitHandle(Int32, Double*): PrivateScope, Public, HideBySig
+    CalibrateCurrentSide(): PrivateScope, Public, HideBySig
+    PauseCalibration(): PrivateScope, Public, HideBySig
+    ContinueCalibration(): PrivateScope, Public, HideBySig
+    StopCalibration(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    StartSphereCallibration_WithStylus(Double): PrivateScope, Public, HideBySig
+    GetPointsInCircularPath(): PrivateScope, Public, HideBySig
+    ChangeHandlerToVision(): PrivateScope, Public, HideBySig
+    GotoFocusPosition(Double, Double, Double): PrivateScope, Public, HideBySig
+    DoVisionCalibration(Double): PrivateScope, Public, HideBySig
+    SetCurrentSide(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_SphereCalibration+PointsCountEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_SphereCalibration+FinishedSphereCycleHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_SphereCalibration+ProbeOffsetEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double[], Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double[], Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CircularInterPolation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Boolean AddPointsFlag : Public
+    Double HeightGaugeMax : Public
+    Double HeightGaugeMin : Public
+  Events:
+    DisableAddPointFlagEvent DisableAddpPointEvent: SpecialName
+  Methods:
+    add_DisableAddpPointEvent(DisableAddPointFlagEvent): PrivateScope, Public, HideBySig, SpecialName
+    remove_DisableAddpPointEvent(DisableAddPointFlagEvent): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SetIntermediate_TargetPosition(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartCircularInterpolation(Double, Int32): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    deleteTempCloudPtsColl(): PrivateScope, Public, HideBySig
+    SetAddPointFlag_HeightGauge(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StopAddingPtstoSelectedShapes(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AddPointToSelectedCloudPoints(Double, Double, Double): PrivateScope, Public, HideBySig
+    Handle_CircularGotoCommand(): PrivateScope, Public, HideBySig
+    AddPathPoint(Int32): PrivateScope, Public, HideBySig
+    AddLine_CircularPath(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ResetPath(): PrivateScope, Public, HideBySig
+    CreateInterPolationCommands(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GotoCommandForNextShape(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_CircularInterPolation+DisableAddPointFlagEvent: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_LinearInterPolation: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SetTargetPosition(): PrivateScope, Public, HideBySig
+    StartLinearInterpolation(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    TakePointForReference(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_ActionParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 Action_EntityID : Public
+    System.Collections.ArrayList ActionParameter_ArrayList : Public, Static
+  Events:
+    ActionParameterEventHandler ActionParameterUpdate: SpecialName
+  Methods:
+    add_ActionParameterUpdate(ActionParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ActionParameterUpdate(ActionParameterEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    RaiseActionChangedEvents(RW_ACTIONPARAMTYPE): PrivateScope, Public, HideBySig
+    SetActionParamForFrontend(RAction*): PrivateScope, Public, HideBySig
+    DeleteAction(Int32): PrivateScope, Public, HideBySig
+    SetCriticalAction(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    RerunAction(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_ActionParameter+ActionParameterEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(RW_ACTIONPARAMTYPE): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(RW_ACTIONPARAMTYPE, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_ImageGridProgram: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Events:
+    PartProgramBuildEventHandler CallPartProgramBuildEvent: SpecialName
+  Methods:
+    add_CallPartProgramBuildEvent(PartProgramBuildEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CallPartProgramBuildEvent(PartProgramBuildEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    CreatePathListForImageAction(Int32, Int32, Double, Double): PrivateScope, Public, HideBySig
+    Continue_PauseImageAction(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StopImageAction(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    Goto_NextCellPosition(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetStoragePath(String): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_ImageGridProgram+PartProgramBuildEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.TISCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double[] TargetPosition : Public
+    Double[] FeedRate : Public
+    Int32 SwivelTarget : Public
+    RWrapper.TISTargetType TargetType : Public
+    RWrapper.TISActionType ActionType : Public
+    Double[] ActionParameters : Public
+    Int32 ShapeFromStep : Public
+    System.String ShapeType : Public
+    System.String FG_Type : Public
+    Int32 ShapeID : Public
+    Double*[] RotaryScannedPtsArray : Public
+    Double*[] RotaryScanPositions : Public
+    Int32 CurrentFrameIndex : Public
+    Int32 TotalFramesReceived : Public
+    Int32 StepSize : Public
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.ShankAlignStep: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Double, Boolean): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Runout 'get set' : 
+    Double Height 'get set' : 
+    Boolean Enabled 'get set' : 
+    Int32 Level 'get set' : 
+  Methods:
+    get_Level(): PrivateScope, Public, HideBySig, SpecialName
+    set_Level(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Enabled(): PrivateScope, Public, HideBySig, SpecialName
+    set_Enabled(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_Height(): PrivateScope, Public, HideBySig, SpecialName
+    set_Height(Double): PrivateScope, Public, HideBySig, SpecialName
+    get_Runout(): PrivateScope, Public, HideBySig, SpecialName
+    set_Runout(Double): PrivateScope, Public, HideBySig, SpecialName
+Class RWrapper.TIS_Control: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    RWrapper.TISMeasureTool CurrentTool : Public
+    Int32 ScanDelayCount : Public
+    Int32 CurrentStepIndex : Public
+    Int32 PointPickingDelay : Public
+    Int32 CurrentScanDoneCount : Public
+    Boolean AoR_Done : Public
+    Boolean ShankAlign_Done : Public
+    Boolean DatumTaken : Public
+    Boolean TopRefTaken : Public
+    Boolean A_Axis_isVertical : Public
+    Boolean RotaryScanisON : Public
+    Double RotaryScanSpeed : Public
+    Double RotaryTravelSpeed : Public
+    Double CuttingTipScanSpan : Public
+    Double[] RotaryStartPosition : Public
+    Double[] DatumPoint : Public
+    Double[] TopRefPoint : Public
+    Double[] TIS_Axis : Public
+    System.Collections.Generic.List`1[RWrapper.TISCommand] CommandsList : Public
+    System.Collections.Generic.List`1[RWrapper.ShankAlignStep] ShankAlignColl : Public
+  Events:
+    FinishedRotaryScanningEventHandler FinishedRotaryScanEvent: SpecialName
+    RotaryScanningEventHandler RotationalScanEvent: SpecialName
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    add_RotationalScanEvent(RotaryScanningEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RotationalScanEvent(RotaryScanningEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FinishedRotaryScanEvent(FinishedRotaryScanningEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FinishedRotaryScanEvent(FinishedRotaryScanningEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    StartMeasurement(List`1): PrivateScope, Public, HideBySig
+    RotaryScanForCurrentTask(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Finish_Measurement(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GenerateCommandsList(List`1): PrivateScope, Public, HideBySig
+    RestoreAxisofRotation(): PrivateScope, Public, HideBySig
+    RunCommandsFromList(): PrivateScope, Public, HideBySig
+    DoCommandActions(): PrivateScope, Public, HideBySig
+    ResetTISAxis(): PrivateScope, Public, HideBySig
+    SetPoint(Double[], Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.TIS_Control+RotaryScanningEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.TIS_Control+FinishedRotaryScanningEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double[]): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double[], AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.CommandLogger: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.String CommandValue : Public
+    System.String Comments : Public
+    System.ValueType Timestamp DateTime IsBoxed : Public
+Class RWrapper.RW_MainInterface: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Int32 ProbeCount : Public
+    System.String WaitStatusMessage : Public
+    Boolean AllowCancelofStatusTask : Public
+    Byte* image_pixels : Public
+    System.String AppDataFolderPath : Public
+    System.String LogFolderPath : Public
+    Boolean MachineConnectedStatus : Public
+    Boolean MachineCNCStatus : Public
+    Boolean IsMultiLevelZoom : Public
+    Boolean AllowStepImport : Public
+    Boolean UseLookAhead : Public
+    Boolean TwoXLensFitted : Public
+    Int32 MachineCardFlag : Public
+    Int32 DealyinSec : Public
+    Int32 Delay_AfterTargetReached : Public
+    System.Windows.Forms.Timer StopWaitMessageTimer : Public
+    System.Windows.Forms.Timer StartWaitMessageTimer : Public
+    System.String LastSelectedMagLevel : Public
+    Double DigitalZoomLevel : Public
+    Boolean Do_Homing_At_Startup : Public
+    Double[] RCadMousePos : Public
+    System.String EntityName : Public, Static
+    Int32 EntityID : Public, Static
+    System.Collections.Generic.List`1[System.Int32] EntityIDList : Public, Static
+    System.Collections.Generic.List`1[System.String] EntityNameList : Public, Static
+    System.String DBConnectionString : Public, Static
+  Events:
+    UpdateCamSettingsHandler UpdateCamSettingsEvent: SpecialName
+    UpdateTruePositionWindowParam TruePositionEvent: SpecialName
+    ShowRotateScanEventHandler ShowRotateScanEvent: SpecialName
+    DeviationEventHandler MeasureDeviationEvent: SpecialName
+    SurfaceEDEventHandler SavedImagePath: SpecialName
+    MsgBoxEventHandler ShowMsgBoxText: SpecialName
+    WaitMessageEventHandler ShowHideStatusWindow: SpecialName
+    HelpTextStatusEventHandler DisplayStatusMessage: SpecialName
+    RaiseToolbarClickEventHandler GenerateToolbarBtnCheckEvent: SpecialName
+    RaiseToolbarClickEventHandler GenerateToolbarClickEvent: SpecialName
+    RightClickOnEntityEventHandler ChangeMeasurementFontSize: SpecialName
+    ClearAllEventHandler ClearEverything: SpecialName
+    RightClickOnEntityEventHandler RightClickedOnEntity: SpecialName
+    DoubleClickOnEntityEventHandler DoubleClickedOnEntity: SpecialName
+    SurfaceEDEventHandler GetSurfaceEDUserChoice: SpecialName
+    ProfileScanEndPtsEventHandler ProfileScanEndPtEvent: SpecialName
+    ShowHideWaitCursrEventHandler WaitCursor: SpecialName
+    RWrapperEventHandler ClearAllRadioButtonCheckedProperty: SpecialName
+    LineArcParametersEventHandler LineArcParameters: SpecialName
+    ShowAutoFocusWindow ShowWindowForAutoContour: SpecialName
+    ShowAutoFocusWindow ShowWindowForAutoFocus: SpecialName
+    BestFitSurfaceEventHandler BestFitSurfaceParam: SpecialName
+    RWrapperEventHandler FixtureAlign_RefPt_Taken: SpecialName
+    RWrapperEventHandler LineArcUcsCreatedEvent: SpecialName
+    RWrapperEventHandler ShowCloudPointMeasureWindow: SpecialName
+    RWrapperEventHandler ShowDeviationWindow: SpecialName
+    RWrapperEventHandler ShowOuterMostLineEvent: SpecialName
+    RWrapperEventHandler Translationevent: SpecialName
+    RWrapperEventHandler RotationAngleevent: SpecialName
+    RWrapperEventHandler NudgeRotatePPevent: SpecialName
+    RWrapperEventHandler RelativePointOffset: SpecialName
+    RWrapperEventHandler PerpendicularLine3DOffset: SpecialName
+    RWrapperEventHandler ParallelLine3DOffset: SpecialName
+    RWrapperEventHandler PerpendicularPlaneOffset: SpecialName
+    RWrapperEventHandler ParallelPlaneOffset: SpecialName
+    RWrapperEventHandler AutoDxfAlign: SpecialName
+    RWrapperEventHandler EnterThreadCount: SpecialName
+    RWrapperEventHandler EnterDerivedLineLength: SpecialName
+    RWrapperEventHandler EnterTextValue: SpecialName
+    RWrapperEventHandler EnterTruePositionForPoint: SpecialName
+    RWrapperEventHandler Enter3DTruePositionPoint: SpecialName
+    RWrapperEventHandler Enter3DTruePosition: SpecialName
+    RWrapperEventHandler EnterTruePosition: SpecialName
+    RWrapperEventHandlerWithDouble AngularityLand: SpecialName
+    RWrapperEventHandlerWithDouble PerpediclaurityLand: SpecialName
+    RWrapperEventHandlerWithDouble ParallelismLand: SpecialName
+    RWrapperEventHandler OnePtAngleLine: SpecialName
+    RWrapperEventHandler OnePtOffsetLine: SpecialName
+    RWrapperEventHandler CircleDiameter: SpecialName
+    RWrapperEventHandler ParallelLineOffset: SpecialName
+    RWrapperEventHandler HideEntityPanel: SpecialName
+  Methods:
+    GetCamProperty(Int32): PrivateScope, Public, HideBySig
+    GetRefDotParams(Int32, Double[]): PrivateScope, Public, HideBySig
+    SetdefaultCamSettings(Int32, String): PrivateScope, Public, HideBySig
+    ProbeGotoRequiredPosition_GetProbePts(): PrivateScope, Public, HideBySig
+    Continue_PauseProbeScanning(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AbortProbeScanningProcess(): PrivateScope, Public, HideBySig
+    ShowDeviation_ProbeScanPts(): PrivateScope, Public, HideBySig
+    CloudPointDeviation_DxfShape(Double, Double, Double, Boolean(HasFieldMarshal), Int32, Boolean(HasFieldMarshal), Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CloudPointDeviation_DxfShape(Double, Double, Double, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Set_FixedCrosshairColor(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Set_FlexibleCrosshairColor(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Set_MeasurementColor(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Set_ShapeColor(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    SaveDialog_DxfExport(String): PrivateScope, Public, HideBySig
+    OpenDialog_DxfImport(String): PrivateScope, Public, HideBySig
+    WriteUserLog(String, String, String): PrivateScope, Public, HideBySig
+    WriteErrorLog(String, String, String): PrivateScope, Public, HideBySig
+    WriteErrorLog(String, Exception): PrivateScope, Public, HideBySig
+    WriteModuleInitilization(String): PrivateScope, Public, HideBySig
+    WriteCommandSendLog(CommandLogger): PrivateScope, Public, HideBySig
+    WriteCommandSendLog(String): PrivateScope, Public, HideBySig
+    RaiseEvents(Int32, Double): PrivateScope, Public, HideBySig
+    RaiseEvents(Int32): PrivateScope, Public, HideBySig
+    RaiseSurfaceFrameGrabEvent(String): PrivateScope, Public, HideBySig
+    RaiseSurfaceFrameGrabEvent(): PrivateScope, Public, HideBySig
+    RaiseSavedImageEvent(String): PrivateScope, Public, HideBySig
+    RaiseCamSettingsUpdated(String): PrivateScope, Public, HideBySig
+    LineArcEvent(Double, Double, Double, Double, Double, Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartFocusInFrameGrab(): PrivateScope, Public, HideBySig
+    StartFocusForRightClick(): PrivateScope, Public, HideBySig
+    StartFocusInProfileScan(): PrivateScope, Public, HideBySig
+    ShowHideWaitCursor(Int32): PrivateScope, Public, HideBySig
+    GotProfileScanEndPts(Int32): PrivateScope, Public, HideBySig
+    BestFitSurfaceWindow(Double, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ShowWindowForAutoFocusRaise(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ShowWindowForAutoContourRaise(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ShowRotationScanWindowRaise(Int32): PrivateScope, Public, HideBySig
+    BestFitWithDifferentParam(Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    LineArcUcsCreated(): PrivateScope, Public, HideBySig
+    RaiseTruePositionEvent(Double, Double): PrivateScope, Public, HideBySig
+    UpdateVideoGraphics(): PrivateScope, Public, HideBySig
+    UpdateRCadGraphics(): PrivateScope, Public, HideBySig
+    UpdateDxfGraphics(): PrivateScope, Public, HideBySig
+    CaptureCAxis(): PrivateScope, Public, HideBySig
+    GenerateToolBarClick(String, String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    deletePointsLogFile(): PrivateScope, Public, HideBySig
+    SetShapeForMeasure(Int32): PrivateScope, Public, HideBySig
+    SetShapeRightClickForMeasure(Int32): PrivateScope, Public, HideBySig
+    RightClickOnShapeInMeasureMode(Shape*): PrivateScope, Public, HideBySig
+    GetInsertedImageBytes(Boolean(HasFieldMarshal), Byte[]): PrivateScope, Public, HideBySig
+    GetBinarizedImage(Byte[]): PrivateScope, Public, HideBySig
+    ClassControl(ClassNames, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetCurrentCameraType(): PrivateScope, Public, HideBySig
+    Abort_HomePosition_Command(): PrivateScope, Public, HideBySig
+    OperateSpecialPins(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Set_Forced_Auto_FG(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CheckRunningGraphicsCard(): PrivateScope, Public, HideBySig
+    CrossHairOffsets(Int32[], Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+    ShowWaitStatusMessage(String, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartHideWaitStatusMessage(Int32): PrivateScope, Public, HideBySig
+    HideWaitMessagePanel(Object, EventArgs): PrivateScope, Public, HideBySig
+    ShowWaitMessagePanel(Object, EventArgs): PrivateScope, Public, HideBySig
+    Update_MsgBoxStatus(String, RW_MSGBOXTYPE, RW_MSGBOXICONTYPE, Boolean(HasFieldMarshal), String): PrivateScope, Public, HideBySig
+    Update_FramGrab(String, String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetLineArcDiffShapes(Double, Double, Double, Double, Double, Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AddLineArcDiffShapes(): PrivateScope, Public, HideBySig
+    CancelLineArc(): PrivateScope, Public, HideBySig
+    MaximizeWindow(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    ResizetheWindow(Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    ToggleShowHideWindow(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ToggleSnapeMode(): PrivateScope, Public, HideBySig
+    ToggleVSnapeMode(): PrivateScope, Public, HideBySig
+    DXFImport(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    DXFExport(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetAlignmentCorrectionValue(Double[], Double[], Double[]): PrivateScope, Public, HideBySig
+    SetDerivedShapeParameters(Double, Double, Double): PrivateScope, Public, HideBySig
+    SetUCSRotateAngle(Double): PrivateScope, Public, HideBySig
+    SetTruePos(Double, Double, Int32, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Set3DTruePos(Double, Double, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CancelPressed(): PrivateScope, Public, HideBySig
+    MM_DropDown_clicked(Int32): PrivateScope, Public, HideBySig
+    SetMagnification(String): PrivateScope, Public, HideBySig
+    SetCameraToCompleteZoom_Exeload(): PrivateScope, Public, HideBySig
+    RefreshDRO(): PrivateScope, Public, HideBySig
+    SetProgramHomePostion(): PrivateScope, Public, HideBySig
+    IsPartprogramRunning(): PrivateScope, Public, HideBySig
+    SetUserChosenSurfaceED(String): PrivateScope, Public, HideBySig
+    HighlightUserChosenSurfaceED(String): PrivateScope, Public, HideBySig
+    SetEntityTransparency(Double): PrivateScope, Public, HideBySig
+    setCoordinateListForAutomeasurement(List`1): PrivateScope, Public, HideBySig
+    setCoordinate_ProbeMeasurement(List`1, ArrayList): PrivateScope, Public, HideBySig
+    setActionIdForPPEdit(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetNudge_RotateForRCad(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetNudge_RotateForDxf(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AutoAlignmentForSelectedentities(Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    SetOGLFontFamily(String): PrivateScope, Public, HideBySig
+    SetOGLGradientBackGround(Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    SetFGandCloudPointSize(Int32): PrivateScope, Public, HideBySig
+    SetActionForNudgeRotate(): PrivateScope, Public, HideBySig
+    SetProfileScanParam(Int32): PrivateScope, Public, HideBySig
+    PickProfileScanEndPoint(): PrivateScope, Public, HideBySig
+    SetPLaceCalibrationDeatil(String, String, String, String): PrivateScope, Public, HideBySig
+    PLaceCalibrationTable(): PrivateScope, Public, HideBySig
+    CreateIntersectionPtsWithTriangle(Double, Int32): PrivateScope, Public, HideBySig
+    SetOffsetCorrectionflag(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetProfileScanPause_StoppedFlag(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ContinueProfileScan(): PrivateScope, Public, HideBySig
+    SetProfileScanParam_MultiFeature(Int32): PrivateScope, Public, HideBySig
+    ContinueMultiFeatureProfileScan(): PrivateScope, Public, HideBySig
+    CreateAreaShape(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CompareCloudPtsWithStlSurface(Double): PrivateScope, Public, HideBySig
+    SetColorThresholdValue(Double): PrivateScope, Public, HideBySig
+    PointToCloudPointsMeasurement(Double, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    CloudPointComparator(Int32, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    CloudPointComparator(Double, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    SetRGBChannelColor(Int32): PrivateScope, Public, HideBySig
+    CreateCloudPointsMeasurement(ArrayList): PrivateScope, Public, HideBySig
+    SetSurfaceAloType(Int32): PrivateScope, Public, HideBySig
+    Start_StopRotationalScan(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetContinuousScanMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetRunoutFlute(Int32, Int32): PrivateScope, Public, HideBySig
+    SetRunOutFlute_Radius(Int32, Double): PrivateScope, Public, HideBySig
+    GetRunOutAxialRadius(Boolean&): PrivateScope, Public, HideBySig
+    SetFilterStatus(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetMMCStatus(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetMMCOnOffStatus(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetAlgo6Param(Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetSurfaceEDSettings(Int32): PrivateScope, Public, HideBySig
+    SetNogoMeasurement(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetCriticalShapeParameter(Boolean(HasFieldMarshal), Double, Double): PrivateScope, Public, HideBySig
+    SetMeasurementColorGradient(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetRcadZoomToExtent(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CreateSurfaceForClosedSurface(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    UpdateCameraZoom(Int32, Int32): PrivateScope, Public, HideBySig
+    SetbestfitAlignmentParam(Double, Int32): PrivateScope, Public, HideBySig
+    CreateCamProfileShape(Double, Double, Double, Double, Double, Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    GetCamProfileDistanceFromCenter(Double, Int32): PrivateScope, Public, HideBySig
+    GethobCheckerPersonaldata(Int32, Int32, Int32, String, String, String, Int32, Boolean(HasFieldMarshal), String, Double, String): PrivateScope, Public, HideBySig
+    GetvalueofBCXBCY(Double, Double): PrivateScope, Public, HideBySig
+    SetShapeMeasureHideDuringProgramRun(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetPixelWidthCorrectionStatusForOneShot(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetPixelWidthCorrectionConstants(Double*): PrivateScope, Public, HideBySig
+    SetCamProperty(Int32, Int32): PrivateScope, Public, HideBySig
+    remove_ShowRotateScanEvent(ShowRotateScanEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_TruePositionEvent(UpdateTruePositionWindowParam): PrivateScope, Public, HideBySig, SpecialName
+    remove_TruePositionEvent(UpdateTruePositionWindowParam): PrivateScope, Public, HideBySig, SpecialName
+    add_UpdateCamSettingsEvent(UpdateCamSettingsHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateCamSettingsEvent(UpdateCamSettingsHandler): PrivateScope, Public, HideBySig, SpecialName
+    CloseAll(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    IntializeOpengl(ValueType IntPtr IsBoxed, Int32, Int32, Int32, Int32, Int32): PrivateScope, Public, HideBySig
+    Form_KeyUp(KeyEventArgs): PrivateScope, Public, HideBySig
+    Form_KeyDown(KeyEventArgs): PrivateScope, Public, HideBySig
+    GetStatusMessage(String, String): PrivateScope, Public, HideBySig
+    ClearALL(): PrivateScope, Public, HideBySig
+    InternalClearAll(Int32): PrivateScope, Public, HideBySig
+    SaveImageForOneShot(String): PrivateScope, Public, HideBySig
+    SaveAllImageswithoutgraphics(Int32): PrivateScope, Public, HideBySig
+    ZoomToExtentsRcadorDxf(Int32): PrivateScope, Public, HideBySig
+    ClearShapeAndMeasure_Selections(): PrivateScope, Public, HideBySig
+    SaveVideoWindowImage(String, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SaveRcadWindowImage(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    RGBArray2Image(Byte*, Int32, Int32, String, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    HandleMeasure_Click(String): PrivateScope, Public, HideBySig
+    HandleDrawToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleDerivedShapeToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleCrossHairToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleEditToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleToolsToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleRcadToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleDXFToolbar_Click(String): PrivateScope, Public, HideBySig
+    HandleShapeParameter_Click(String): PrivateScope, Public, HideBySig
+    HandleMeasureParameter_Click(String): PrivateScope, Public, HideBySig
+    HandleUCSProperties_Click(String): PrivateScope, Public, HideBySig
+    HandleVisionHeadToolBar_Click(String): PrivateScope, Public, HideBySig
+    HandleRightClick_OnEntities(String, String): PrivateScope, Public, HideBySig
+    HandleCheckedProperty_Load(String, String): PrivateScope, Public, HideBySig
+    HandleGenerateToolbarClick(String, String): PrivateScope, Public, HideBySig
+    HandleGenerateToolbarClick1(String, String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GenerateEventToCheckCurrentSM(): PrivateScope, Public, HideBySig
+    CallClearRadioButttons(): PrivateScope, Public, HideBySig
+    OnVideoLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnVideoMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnVideoMouseEnter(): PrivateScope, Public, HideBySig
+    OnVideoMouseLeave(): PrivateScope, Public, HideBySig
+    OnRCadLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadDoubleLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnRCadMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnRCadMouseEnter(): PrivateScope, Public, HideBySig
+    OnRCadMouseLeave(): PrivateScope, Public, HideBySig
+    OnDXFLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnDXFMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnDXFMouseEnter(): PrivateScope, Public, HideBySig
+    OnDXFMouseLeave(): PrivateScope, Public, HideBySig
+    OnPartprogramLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnPartprogramMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnPartprogramMouseEnter(): PrivateScope, Public, HideBySig
+    OnPartprogramMouseLeave(): PrivateScope, Public, HideBySig
+    Update_HelpStatusMessage(String, Boolean(HasFieldMarshal), String): PrivateScope, Public, HideBySig
+    add_RelativePointOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RelativePointOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_NudgeRotatePPevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_NudgeRotatePPevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RotationAngleevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RotationAngleevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_Translationevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Translationevent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowOuterMostLineEvent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowOuterMostLineEvent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowDeviationWindow(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowDeviationWindow(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowCloudPointMeasureWindow(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowCloudPointMeasureWindow(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_LineArcUcsCreatedEvent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_LineArcUcsCreatedEvent(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_FixtureAlign_RefPt_Taken(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_FixtureAlign_RefPt_Taken(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_BestFitSurfaceParam(BestFitSurfaceEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_BestFitSurfaceParam(BestFitSurfaceEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowWindowForAutoFocus(ShowAutoFocusWindow): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowWindowForAutoFocus(ShowAutoFocusWindow): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowWindowForAutoContour(ShowAutoFocusWindow): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowWindowForAutoContour(ShowAutoFocusWindow): PrivateScope, Public, HideBySig, SpecialName
+    add_LineArcParameters(LineArcParametersEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_LineArcParameters(LineArcParametersEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ClearAllRadioButtonCheckedProperty(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ClearAllRadioButtonCheckedProperty(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_WaitCursor(ShowHideWaitCursrEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_WaitCursor(ShowHideWaitCursrEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ProfileScanEndPtEvent(ProfileScanEndPtsEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ProfileScanEndPtEvent(ProfileScanEndPtsEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GetSurfaceEDUserChoice(SurfaceEDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GetSurfaceEDUserChoice(SurfaceEDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DoubleClickedOnEntity(DoubleClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DoubleClickedOnEntity(DoubleClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_RightClickedOnEntity(RightClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_RightClickedOnEntity(RightClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ClearEverything(ClearAllEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ClearEverything(ClearAllEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ChangeMeasurementFontSize(RightClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ChangeMeasurementFontSize(RightClickOnEntityEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GenerateToolbarClickEvent(RaiseToolbarClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GenerateToolbarClickEvent(RaiseToolbarClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_GenerateToolbarBtnCheckEvent(RaiseToolbarClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_GenerateToolbarBtnCheckEvent(RaiseToolbarClickEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_DisplayStatusMessage(HelpTextStatusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_DisplayStatusMessage(HelpTextStatusEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowHideStatusWindow(WaitMessageEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowHideStatusWindow(WaitMessageEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowMsgBoxText(MsgBoxEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShowMsgBoxText(MsgBoxEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_SavedImagePath(SurfaceEDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_SavedImagePath(SurfaceEDEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_MeasureDeviationEvent(DeviationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_MeasureDeviationEvent(DeviationEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ShowRotateScanEvent(ShowRotateScanEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_HideEntityPanel(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_HideEntityPanel(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ParallelLineOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ParallelLineOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_CircleDiameter(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_CircleDiameter(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_OnePtOffsetLine(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_OnePtOffsetLine(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_OnePtAngleLine(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_OnePtAngleLine(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ParallelismLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    remove_ParallelismLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    add_PerpediclaurityLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    remove_PerpediclaurityLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    add_AngularityLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    remove_AngularityLand(RWrapperEventHandlerWithDouble): PrivateScope, Public, HideBySig, SpecialName
+    add_EnterTruePosition(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_EnterTruePosition(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_Enter3DTruePosition(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Enter3DTruePosition(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_Enter3DTruePositionPoint(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_Enter3DTruePositionPoint(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_EnterTruePositionForPoint(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_EnterTruePositionForPoint(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_EnterTextValue(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_EnterTextValue(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_EnterDerivedLineLength(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_EnterDerivedLineLength(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_EnterThreadCount(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_EnterThreadCount(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_AutoDxfAlign(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_AutoDxfAlign(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ParallelPlaneOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ParallelPlaneOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_PerpendicularPlaneOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PerpendicularPlaneOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_ParallelLine3DOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ParallelLine3DOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    add_PerpendicularLine3DOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_PerpendicularLine3DOffset(RWrapperEventHandler): PrivateScope, Public, HideBySig, SpecialName
+Class RWrapper.RW_MainInterface+RWrapperEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+RWrapperEventHandlerWithDouble: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+ClearAllEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+SurfaceEDEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+RightClickOnEntityEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32, String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+DoubleClickOnEntityEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+WaitMessageEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+HelpTextStatusEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, Boolean(HasFieldMarshal), String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, Boolean(HasFieldMarshal), String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+RaiseToolbarClickEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, String, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, String, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+MsgBoxEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String, RW_MSGBOXTYPE, RW_MSGBOXICONTYPE, Boolean(HasFieldMarshal), String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, RW_MSGBOXTYPE, RW_MSGBOXICONTYPE, Boolean(HasFieldMarshal), String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+LineArcParametersEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double, Double, Double, Double, Double, Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, Double, Double, Double, Double, Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+ShowHideWaitCursrEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+BestFitSurfaceEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+DeviationEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(List`1, ArrayList): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(List`1, ArrayList, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+ProfileScanEndPtsEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+ShowAutoFocusWindow: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+ShowRotateScanEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+UpdateTruePositionWindowParam: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double, Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_MainInterface+UpdateCamSettingsHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(String): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(String, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Struct RWrapper.RW_Enum.RW_MSGBOXTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_MSGBOXTYPE MSG_YES_NO = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXTYPE MSG_OK = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXTYPE MSG_OK_CANCEL = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXTYPE MSG_YES_NO_CANCEL = 3 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_MSGBOXICONTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_EXCLAMATION = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_ERROR = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_INFORMATION = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_NONE = 3 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_QUESTION = 4 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_STOP = 5 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MSGBOXICONTYPE MSG_WARNING = 6 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_WINDOWTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_WINDOWTYPE VIDEO_WINDOW = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_WINDOWTYPE RCAD_WINDOW = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_WINDOWTYPE DXF_WINDOW = 2 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_CURSORTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_DEFAULT = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_CROSS = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_ARCFG = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_CIRCLEFG = 3 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_ANGRECTFG = 4 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_RECTFG = 5 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_NULL = 6 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_TRIM = 7 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_PANHOLD = 8 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_CURSORTYPE RW_CURSOR_PANRELEASE = 9 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_SHAPEPARAMTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_ADDED = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_SELECTION_CHANGED = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_POINTS_UPDATE = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_TABLE_UPDATE = 3 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_REMOVED = 4 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_UPDATE = 5 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_SHAPEPARAMTYPE SHAPE_HIDE_UNHIDE = 6 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_ACTIONPARAMTYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_ACTIONPARAMTYPE ACTION_ADDED = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_ACTIONPARAMTYPE ACTION_REMOVED = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_ACTIONPARAMTYPE ACTION_UPDATE = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_ACTIONPARAMTYPE ACTION_SELECTION_CHANGED = 3 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE UCS_ADDED = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE UCS_SELECTION_CHANGED = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE UCS_REMOVED = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE CHANGE_DXF_LIST = 3 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_UCSPARAMETER_TYPE UCS_ROTATE_ANGLE = 4 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_DXFPARAMETER_TYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_DXFPARAMETER_TYPE DXF_ADDED = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_DXFPARAMETER_TYPE DXF_REMOVED = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_DXFPARAMETER_TYPE DXF_SELECTION_CHANGED = 2 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE MEASUREMENT_ADDED = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE MEASUREMENT_REMOVED = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE MEASUREMENT_SELECTION_CHANGED = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE MEASUREMENT_UPDATE = 3 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.RW_MEASUREPARAM_TYPE MEASUREMENT_TABLE_UPDATE = 4 : Public, Static, Literal, HasDefault
+Struct RWrapper.RW_Enum.PROGRAM_PARAMETER: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.RW_Enum.PROGRAM_PARAMETER PP_NULL = 0 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.PROGRAM_PARAMETER DEVIATION = 1 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.PROGRAM_PARAMETER RELATIVE_PTOFFSET = 2 : Public, Static, Literal, HasDefault
+    RWrapper.RW_Enum.PROGRAM_PARAMETER DEVIATION_RELATIVE_PT = 3 : Public, Static, Literal, HasDefault
+Struct RWrapper.ClassNames: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.ClassNames AutoCalibration = 0 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames L_Block = 1 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames DelphiCam = 2 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames SphereCalibration = 3 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames V_Block_Calib = 4 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames Fixture_Calib = 5 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames ImageGridProgram = 6 : Public, Static, Literal, HasDefault
+    RWrapper.ClassNames SuperImposeImage = 7 : Public, Static, Literal, HasDefault
+Struct RWrapper.TISMeasureTool: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.TISMeasureTool GetAxis = 0 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool ShankAlignment = 1 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool ShankDia = 2 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool CuttingDia = 3 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool FaceRunout = 4 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool PointAngle = 5 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool StepLength = 6 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool BallNose = 7 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool MaxLine = 8 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool MaxArc = 9 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool Helix = 10 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool CoreDia = 11 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool CornerDia = 12 : Public, Static, Literal, HasDefault
+    RWrapper.TISMeasureTool BackTaper = 13 : Public, Static, Literal, HasDefault
+Struct RWrapper.TISTargetType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.TISTargetType AbsolutePosition = 0 : Public, Static, Literal, HasDefault
+    RWrapper.TISTargetType RelativeToStart = 1 : Public, Static, Literal, HasDefault
+    RWrapper.TISTargetType RelativeToPreviousCommand = 2 : Public, Static, Literal, HasDefault
+Struct RWrapper.TISActionType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    RWrapper.TISActionType TravelCommand = 0 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType StaticFrameGrab = 1 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType RotaryScan = 2 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType Y_AutoFocus = 3 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType Z_AutoFocus = 4 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType R_AutoFocus = 5 : Public, Static, Literal, HasDefault
+    RWrapper.TISActionType Swivel_A_Axis = 6 : Public, Static, Literal, HasDefault
+Class RWrapper.RW_AutoProfileScanMeasure: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Check_AutoProfileScan_Instance(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    StartAutoProfileScan(Double, Int32, Int32, Int32, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    NextprofileScan(): PrivateScope, Public, HideBySig
+    StartNextProfileScan(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.PointsToGo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Double Pt_X : Public
+    Double Pt_Y : Public
+    Double Pt_Z : Public
+    Double Pt_R : Public
+    Double Sp_X : Public
+    Double Sp_Y : Public
+    Double Sp_Z : Public
+    Double Sp_R : Public
+    Boolean path : Public
+Class RWrapper.RW_DelphiCamModule: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double[] ToothMidPt : Public
+    Double[] ReferenceCenter : Public
+    Double[] BC_Values : Public
+    Int32 DelphiCamType : Public
+    Int32 RunoutCorrectionStage : Public
+    Int32 RO_PtsCt : Public
+    Boolean DoingCalibration : Public
+    Boolean FirstToothDone : Public
+    Double HobOD : Public
+    Boolean Getting_BC_Axis : Public
+    Boolean GotAxis : Public
+    Boolean DoingHobMeasurement : Public
+    Boolean HobMeasureisComplete : Public
+    Boolean AutoMeasureMode : Public
+    Boolean AllowIncrement : Public
+    Boolean WaitingForTouchPt : Public
+    Boolean ManualPoint : Public
+    Boolean HobParametersUpdated : Public
+    Double[] Hob_RunoutParams : Public
+    Int32 Listcount : Public
+    Double[] HelicalGashParams : Public
+    Double[] HobParameters : Public
+    Double[] HobSettings : Public
+    Boolean instantiated : Public, Static
+  Events:
+    CompletedthisTask DelphiCamEvent: SpecialName
+  Methods:
+    add_DelphiCamEvent(CompletedthisTask): PrivateScope, Public, HideBySig, SpecialName
+    remove_DelphiCamEvent(CompletedthisTask): PrivateScope, Public, HideBySig, SpecialName
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SendDrotoNextposition(): PrivateScope, Public, HideBySig
+    Start(Int32): PrivateScope, Public, HideBySig
+    Start(Double, Double, Boolean(HasFieldMarshal), Double): PrivateScope, Public, HideBySig
+    countinue_pause_delphicammodule(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Fill__Circle_Centre(Double, Double, Double, Double, Double, Double, Double, Double): PrivateScope, Public, Static, HideBySig
+    StopProcess(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    getMovementdirection(Double*): PrivateScope, Public, HideBySig
+    GetBC_Axis(Double, Int32, Int32): PrivateScope, Public, HideBySig
+    CalculatePtsFor_BC_Axis(Double): PrivateScope, Public, HideBySig
+    Get_Cylinder_Y_Position(): PrivateScope, Public, HideBySig
+    Reset_BC_Axis(): PrivateScope, Public, HideBySig
+    Set_C_Axis(): PrivateScope, Public, HideBySig
+    Set_Runout(): PrivateScope, Public, HideBySig
+    Reset_RunoutValues(): PrivateScope, Public, HideBySig
+    CalculatePts_for_C_Axis_Zero(): PrivateScope, Public, HideBySig
+    GetBacktoHomePosition(): PrivateScope, Public, HideBySig
+    RunMasterCylinder_Rotation(Int32): PrivateScope, Public, HideBySig
+    CalculatePtsfor_Runout_Master(Int32, Double): PrivateScope, Public, HideBySig
+    CalculatePtsfor_Runout_Y(Int32, Double, Double): PrivateScope, Public, HideBySig
+    CalculatePtsfor_Runout(Int32, Double): PrivateScope, Public, HideBySig
+    Run_RunoutCorrection(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Run_StartToothParameters(Int32): PrivateScope, Public, HideBySig
+    CalculatePts_StartToothCentre(): PrivateScope, Public, HideBySig
+    CalculatePts_StartTooth_OD(Double): PrivateScope, Public, HideBySig
+    CalculatePts_StartToothCentre_2Pts(): PrivateScope, Public, HideBySig
+    GetRunoutforShape(ShapeWithList*, Int32, Double*, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    CalculatePts_NoRotation(Double, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetRunout_at_this_Z(Double): PrivateScope, Public, HideBySig
+    Move_To_NextHub(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Hub_Position_7Pts(Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Hub_Position_3Pts(Double, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_DelphiCamModule+CompletedthisTask: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_DelphiCamModule+StartCentreCalibration: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.CNCCommand: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double[] Position : Public
+    Double[] Speed : Public
+    Boolean ProbePoint : Public
+    Int32 ProbeHitDirection : Public
+  Methods:
+    MoveAxisTo(Int32, Double): PrivateScope, Public, HideBySig
+    MoveAxisBy(Int32, Double): PrivateScope, Public, HideBySig
+    SetAxisSpeed(Int32, Double): PrivateScope, Public, HideBySig
+    SetPosition(Double[]): PrivateScope, Public, HideBySig
+    SetSpeed(Double[]): PrivateScope, Public, HideBySig
+    Set(Double[], Double[], Boolean(HasFieldMarshal), Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_LBlock: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double[] Params : Public
+    Double[] StartPosition : Public
+    Boolean FirstStepRunning : Public
+    Boolean CycleStarted : Public
+    RWrapper.RW_LBlock LBlock : Public, Static
+    Boolean instantiated : Public, Static
+  Events:
+    CompletedthisStep LBlockStepCompleted: SpecialName
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    HandleCompletedCurrentStep(): PrivateScope, Public, HideBySig
+    CalculateSteps(Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Initialise_LBlockSettings(Double[], Int32, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Run_LBlock(): PrivateScope, Public, HideBySig
+    Stop_LBlock(): PrivateScope, Public, HideBySig
+    GetAnswer(Double[]): PrivateScope, Public, HideBySig
+    CalculateConeSteps(Int32, Double, Double): PrivateScope, Public, HideBySig
+    RunAutoCone(): PrivateScope, Public, HideBySig
+    GetProbeDirection(Double[], Double[]): PrivateScope, Public, HideBySig
+    add_LBlockStepCompleted(CompletedthisStep): PrivateScope, Public, HideBySig, SpecialName
+    remove_LBlockStepCompleted(CompletedthisStep): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_LBlock+CompletedthisStep: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_CT_SphereCallibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double ScalingCoefficient : Public
+    Double[] NormalVector : Public
+    Double[] Offset : Public
+    Double[] Rlevel : Public
+  Events:
+    UpdateCallibrationValuesEventHandler UpdateCallibrationValues: SpecialName
+  Methods:
+    Check_CallibrationInstance(): PrivateScope, Public, Static, HideBySig
+    Close_CallibrationWindow(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    add_UpdateCallibrationValues(UpdateCallibrationValuesEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_UpdateCallibrationValues(UpdateCallibrationValuesEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    ClearAll(): PrivateScope, Public, HideBySig
+    StartSphereCallibration(Double[], Double): PrivateScope, Public, HideBySig
+    Continue_Pause(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SendDrotoGetPoint(): PrivateScope, Public, HideBySig
+    SendDrotoNextPosition(): PrivateScope, Public, HideBySig
+    StopCallibration(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct RWrapper.RW_CT_SphereCallibration+PathList: AutoLayout, AnsiClass, Class, NestedPublic, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+  Fields:
+    Double PtX : Public
+    Double PtY : Public
+    Double PtZ : Public
+    Boolean Path : Public
+Class RWrapper.RW_CT_SphereCallibration+UpdateCallibrationValuesEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_ImageDelayCalibration: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Events:
+    ImageDelayEventHandler ImageDelayEvent: SpecialName
+  Methods:
+    add_ImageDelayEvent(ImageDelayEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ImageDelayEvent(ImageDelayEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    Check_ImageDelay_Instance(): PrivateScope, Public, Static, HideBySig
+    Close_ImageDelayWindow(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    StartImageDelayCalibration(Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    StopImageCalibration(): PrivateScope, Public, HideBySig
+    RaiseImageDelayEvent(Double, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_ImageDelayCalibration+ImageDelayEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Double, Boolean(HasFieldMarshal)): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Double, Boolean(HasFieldMarshal), AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_OverlapImgWin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    MyInstance(): PrivateScope, Public, Static, HideBySig
+    OnOverlapImgWinLeftMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinRightMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMiddleMouseDown(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinLeftMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinRightMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMiddleMouseUp(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMouseMove(Double, Double): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMouseWheel(Int32): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMouseEnter(): PrivateScope, Public, HideBySig
+    OnOverlapImgWinMouseLeave(): PrivateScope, Public, HideBySig
+    UpdateGraphics(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_RepeatAutoMeasure: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Events:
+    RepeatAutoMeasureEventHandler AutoMeasureEvent: SpecialName
+  Methods:
+    add_AutoMeasureEvent(RepeatAutoMeasureEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_AutoMeasureEvent(RepeatAutoMeasureEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    Check_RepeatAutoMeasure_Instance(): PrivateScope, Public, Static, HideBySig
+    Close_AutoMeasureWindow(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    SetAutomatedMode(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    takePointOfRotation(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StartAutoMeasurement(Double, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Continue_PauseAutoMeasure(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    StopAutoMeasure(): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    HandleCallBack(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_RepeatAutoMeasure+RepeatAutoMeasureEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_RepeatShapeMeasure: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Events:
+    RepeatShapeMeasureEventHandler ShapeMeasureEvent: SpecialName
+  Methods:
+    add_ShapeMeasureEvent(RepeatShapeMeasureEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    remove_ShapeMeasureEvent(RepeatShapeMeasureEventHandler): PrivateScope, Public, HideBySig, SpecialName
+    Check_RepeatShapeMeasure_Instance(): PrivateScope, Public, Static, HideBySig
+    Close_RepeatShapeMeasureWindow(): PrivateScope, Public, Static, HideBySig
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    StartRecording(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    ClearAll(): PrivateScope, Public, HideBySig
+    setCoordinateListForAutoShapemeasure(List`1): PrivateScope, Public, HideBySig
+    CreateNextGrid(): PrivateScope, Public, HideBySig
+    RW_SetOrientationOfComponent(): PrivateScope, Public, HideBySig
+    HandleCallBack(Int32): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class RWrapper.RW_RepeatShapeMeasure+RepeatShapeMeasureEventHandler: AutoLayout, AnsiClass, Class, NestedPublic, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Int32): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Int32, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class RWrapper.RW_SAOIParameter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    Double xvalue : Public
+    Double yvalue : Public
+    IntPtr SetFrontEndValue : Public
+  Methods:
+    MYINSTANCE(): PrivateScope, Public, Static, HideBySig
+    InitialilseGrid(Double, Double, Double, Double, Double, Double): PrivateScope, Public, HideBySig
+    IncrementGridSelection(): PrivateScope, Public, HideBySig
+    StartCNC(): PrivateScope, Public, HideBySig
+    ClearGrid(): PrivateScope, Public, HideBySig
+    ShowHideGrid(): PrivateScope, Public, HideBySig
+    SetTopLeftAccToGetPointer(Double, Double): PrivateScope, Public, HideBySig
+    MachineGotoDefaultPosition(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
