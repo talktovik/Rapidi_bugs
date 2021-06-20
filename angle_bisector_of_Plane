@@ -1,3 +1,75 @@
 Here We have to derive the overall Plane on the cad window and Find out the angle Bisector and make a plane over there.
 https://ocw.mit.edu/high-school/iit-jee/exam-prep/mathematics-videos/3d-geometry-angle-bisector-line-of-intersection/
 This link might Help
+
+
+
+
+This Can be done like the angle bisector of Line.
+
+The Existing code starts from the software like that.
+
+Line* CshLine1 = (Line*)ShColl->getList()[0];
+	    RC_ITER item = ShColl->getList().end();
+		item--;
+		while(((Shape*)(*item).second)->getId() > ThreadCount * 8 - 3)
+		{
+			item--;
+		}	
+		Shape* CShape = (Shape*)(*item).second;
+		Line* CshLine2 = (Line*)CShape;
+		double intesectPt1[2] = {0}, intesectPt2[2] = {0};
+		Line* myLine_angleBisector  = new Line();
+		myLine_angleBisector->LineType = RapidEnums::LINETYPE::FINITELINE;
+		myLine_angleBisector->setLineParameters(Angle_BisectorLine.Angle(), Angle_BisectorLine.Intercept());
+		RMATH2DOBJECT->Line_lineintersection(lineangle, lineintercept, CshLine1->Angle(), CshLine1->Intercept(), &intesectPt1[0]);
+		RMATH2DOBJECT->Line_lineintersection(lineangle, lineintercept, CshLine2->Angle(), CshLine2->Intercept(), &intesectPt2[0]);
+		PointCollection PtColl1;
+		PtColl1.Addpoint(new SinglePoint (intesectPt1[0], intesectPt1[1]));
+		PtColl1.Addpoint(new SinglePoint (intesectPt2[0], intesectPt2[1]));
+		((ShapeWithList*)myLine_angleBisector)->AddPoints(&PtColl1);
+		myLine_angleBisector->IsValid(true); 
+		myLine_angleBisector->setId(ShColl->getList().size());
+		myLine_angleBisector->UcsId(ActId);
+		ShColl->addItem(myLine_angleBisector, false);
+		THREADCALCOBJECT->AddPointsToMainCollectionShape((ShapeWithList*)myLine_angleBisector, true);
+		
+
+		//Angle measurement.............
+		for(unsigned int i = 0; i < ThreadCount * 2 - 1; i++)
+		{
+			Shape* Csh = (Shape*)ShColl->getList()[2 * i];
+			Shape* Csh1 = (Shape*)ShColl->getList()[2 * i + 2];
+		    Cdim = HELPEROBJECT->CreateAngleMeasurment(Csh, Csh1, false);
+			Cdim->setId(MeasureColl->getList().size());
+			MeasureColl->addItem(Cdim, false);
+			
+			Shape* Csh2 = (Shape*)ShColl->getList()[ThreadCount * 4 - 1 + 2 * i];
+			Shape* Csh3 = (Shape*)ShColl->getList()[ThreadCount * 4 - 1 + 2 * i + 2];
+			Cdim = HELPEROBJECT->CreateAngleMeasurment(Csh2, Csh3, false);
+			Cdim->setId(MeasureColl->getList().size());
+			MeasureColl->addItem(Cdim, false);
+		}
+
+		//pitch distance calculation for upper thread.......
+		for (int i = 0; i < UpperTop_Intersection.Pointscount() - 1; i++)
+		{
+			double intPt1[2] = {UpperTop_Intersection.getList()[i]->X, UpperTop_Intersection.getList()[i]->Y};
+			double intPt2[2] = {UpperTop_Intersection.getList()[i + 1]->X, UpperTop_Intersection.getList()[i + 1]->Y};
+			showPitch_Measurement(intPt1, intPt2, myLine_angleBisector);
+		}
+			
+
+		//pitch distance calculation for lower thread.......
+		for (int i = 0; i < LowerTop_Intersection.Pointscount() - 1; i++)
+		{
+			double intPt1[2] = {LowerTop_Intersection.getList()[i]->X, LowerTop_Intersection.getList()[i]->Y};
+			double intPt2[2] = {LowerTop_Intersection.getList()[i + 1]->X, LowerTop_Intersection.getList()[i + 1]->Y};
+			showPitch_Measurement(intPt1, intPt2, myLine_angleBisector);
+		}
+
+		THREADCALCOBJECT->CurrentSelectedThreadAction = this->PointerToAction;
+		MAINDllOBJECT->UpdateShapesChanged();
+	}
+	catch(...){ MAINDllOBJECT->SetAndRaiseErrorMessage("DIMTHREAD0003", __FILE__, __FUNCSIG__); }
+}
