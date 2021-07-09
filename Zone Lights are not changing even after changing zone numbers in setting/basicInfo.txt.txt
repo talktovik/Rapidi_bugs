@@ -7,3 +7,16 @@ But since the moment you change the data its not working.
 
 
 The actual lights are not following the chnge in the settings file.
+Line number 454 in the class LightinigGrid.cs There is the function
+lightiningGrid-> [E:\CTPL\Sources\Build3600\Rapid-i\RapidI_MVVM\Views\Lighting Related Classes\LightingGrid.cs]
+
+and since this is a c# class hence it is having the 3 refrences.
+
+public void UpdateValues(int[] NewValues)
+{
+	in order to go in the var 
+}
+
+The value from the box is actually used here.
+on the file SettingsWin.Xaml.cs
+see the next file.

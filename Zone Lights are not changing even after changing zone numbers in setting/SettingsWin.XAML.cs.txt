@@ -1,0 +1,86 @@
+//function from the module.
+
+
+
+void TabVideoAndCameraSettingsUpdate()
+        {
+            try
+            {
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["LightValue"] = LightValueTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Profile_Zone_No"] = txtProfileZone.Text;
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Aux_Zone_No"] = txtAuxiliary.Text;
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Profile11X_Zone_No"] = txt11XProfile.Text;
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["CoAx_ZoneNo"] = txtCoAxial.Text;
+                CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["ProfileLightLevelFor11X"] = txtProfileLightAt11X.Text;
+
+                try
+                {
+                    CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone1_No"] = txtSurfaceZ1.Text;
+                    CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone2_No"] = txtSurfaceZ2.Text;
+                    CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone3_No"] = txtSurfaceZ3.Text;
+                    CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone4_No"] = txtSurfaceZ4.Text;
+                }
+                catch (Exception exxx)
+                { }
+
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CameraSkew"] = AxisAngleTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CameraSkewXZ"] = AxisAngleXZTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CameraSkewYZ"] = AxisAngleYZTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CamDistortionFactor"] = CamDistortionFactorTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CamDistortionOffsetX"] = CamDistortionOffsetXTxtBx.Text;
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CamDistortionOffsetY"] = CamDistortionOffsetYTxtBx.Text;
+
+                CurrentMachineDataR[UpdateTableIndex("VisionSettings")]["CamLenseType"] = CamLenseTypeCBx.Text;
+
+                //All the textBoxes
+                TextBox[] VideoSettingsTxtBxs = { XOffsetVideoTxtBx, YOffsetVideoTxtBx,
+                                               XPosStartRight, XPosStartLeft, YPosStartTop, YPosStartBottom,
+                                               XMultiplierRight, XMultiplierLeft, YMultiplierTop, YMultiplierBottom };
+                String[] TxtBxNames = { "Xoffset", "Yoffset",
+                                  "XPositionStartRight", "XPositionStartLeft", "YPositionStartTop", "YPositionStartBottom",
+                                  "XMultiplyFactorRight", "XMultiplyFactorLeft", "YMultiplyFactorTop", "YMultiplyFactorBottom"};
+
+                for (int i = 0; i < VideoSettingsTxtBxs.Length; i++)
+                    CurrentMachineDataR[UpdateTableIndex("VisionSettings")][TxtBxNames[i]] = VideoSettingsTxtBxs[i].Text;
+
+                TextBox[] PixWidthTxtBxs = { MagLevel3XTxtBx, MagLevel5XTxtBx, MagLevel11XTxtBx, MagLevel22XTxtBx, MagLevel34XTxtBx,
+                                         MagLevel54XTxtBx, MagLevel67XTxtBx, MagLevel134XTxtBx, MagLevel335XTxtBx};
+                TextBox[] PixWidthYDirTxtBxs = { MagLevel3XTxtBx_YDir, MagLevel5XTxtBx_YDir, MagLevel11XTxtBx_YDir, MagLevel22XTxtBx_YDir, MagLevel34XTxtBx_YDir,
+                                         MagLevel54XTxtBx_YDir, MagLevel67XTxtBx_YDir, MagLevel134XTxtBx_YDir, MagLevel335XTxtBx_YDir};
+                CheckBox[] MagHiddenChkBxs = { MagLevel3XHiddenChkBx, MagLevel5XHiddenChkBx, MagLevel11XHiddenChkBx, MagLevel22XHiddenChkBx, MagLevel34XHiddenChkBx,
+                                         MagLevel54XHiddenChkBx, MagLevel67XHiddenChkBx, MagLevel134XHiddenChkBx, MagLevel335XHiddenChkBx};
+                CheckBox[] MagProLight11XChkBxs = { MagLevel3XProLight11XChkBx, MagLevel5XProLight11XChkBx, MagLevel11XProLight11XChkBx, MagLevel22XProLight11XChkBx, MagLevel34XProLight11XChkBx,
+                                         MagLevel54XProLight11XChkBx, MagLevel67XProLight11XChkBx, MagLevel134XProLight11XChkBx, MagLevel335XProLight11XChkBx};
+                TextBox[] DigitalZoomX ={ DigitalZoom3XTxtBx_XDir, DigitalZoomLevel5XTxtBx_XDir,  DigitalZoomLevel11XTxtBx_XDir,  DigitalZoomLevel22XTxtBx_XDir,  DigitalZoomLevel34XTxtBx_XDir,
+                                          DigitalZoomLevel54XTxtBx_XDir,  DigitalZoomLevel67XTxtBx_XDir,  DigitalZoomLevel134XTxtBx_XDir,  DigitalZoomLevel335XTxtBx_XDir};
+                TextBox[] DigitalZoomY ={ DigitalZoom3XTxtBx_YDir, DigitalZoomLevel5XTxtBx_YDir,  DigitalZoomLevel11XTxtBx_YDir,  DigitalZoomLevel22XTxtBx_YDir,  DigitalZoomLevel34XTxtBx_YDir,
+                                          DigitalZoomLevel54XTxtBx_YDir,  DigitalZoomLevel67XTxtBx_YDir,  DigitalZoomLevel134XTxtBx_YDir,  DigitalZoomLevel335XTxtBx_YDir};
+
+                if (CurrentMachineDataR[UpdateTableIndex("MachineDetails")]["MachineType"].ToString() == "One Shot")
+                {
+                    for (int i = 0; i < MagRows.Length; i++)
+                    {
+                        MagRows[i]["PixelWidth"] = PixWidthTxtBxs[i].Text;
+                        MagRows[i]["Hidden"] = MagHiddenChkBxs[i].IsChecked;
+                        MagRows[i]["ElvnXProfileLight"] = MagProLight11XChkBxs[i].IsChecked;
+                        MagRows[i]["PixelWidthY"] = PixWidthYDirTxtBxs[i].Text;
+                        MagRows[i]["DigitalZoomPixel_X"] = DigitalZoomX[i].Text;
+                        MagRows[i]["DigitalZoomPixel_Y"] = DigitalZoomY[i].Text;
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < MagRows.Length; i++)
+                    {
+                        MagRows[i]["PixelWidth"] = PixWidthTxtBxs[i].Text;
+                        MagRows[i]["Hidden"] = MagHiddenChkBxs[i].IsChecked;
+                        MagRows[i]["ElvnXProfileLight"] = MagProLight11XChkBxs[i].IsChecked;
+                        MagRows[i]["PixelWidthY"] = PixWidthTxtBxs[i].Text;
+                        MagRows[i]["DigitalZoomPixel_X"] = DigitalZoomX[i].Text;
+                        MagRows[i]["DigitalZoomPixel_Y"] = DigitalZoomY[i].Text;
+                    }
+                }
+            }
+            catch (Exception ex)
+            { RWrapper.RW_MainInterface.MYINSTANCE().WriteErrorLog("FrontEndError:SETW30", ex); }
+        }
