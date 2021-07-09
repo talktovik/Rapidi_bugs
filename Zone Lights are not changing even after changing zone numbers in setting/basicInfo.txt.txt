@@ -1,0 +1,9 @@
+The Setting tab is inside of Video/Camera.
+
+Everything we have to do is Lighting Details 
+there are zone 1 - 8.
+
+But since the moment you change the data its not working.
+
+
+The actual lights are not following the chnge in the settings file.
