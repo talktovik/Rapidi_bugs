@@ -1,0 +1,163 @@
+Textbox Value in which we we can see the values of Zone1 name  = txtSurfaceZ1<TextBlock>
+FillTextBox(txtSurfaceZ1, "LightingSettings", "MachineNo", MachineNo, "Zone1_No", true);
+
+here 
+TableName = LightingSettings(string)
+ColName = MachineNo(string)
+Parameter = Machine Number(Object)
+ColHeader = Zone1_No(string)
+
+table name clue = Lighting Settings
+
+-------------------------------------------------------------------------------------------------
+What I am thinking:
+The database is actually updating because we can see the values reflected the moment we restart the software.
+Now I think we have to look which functions are actually using this values  stored in the DB apart from the frontend.
+We have to see how this database is actually sending the values to the machine so that it can be changed.
+-------------------------------------------------------------------------------------------------------------
+Lets see which are the functions which are using the table "LightingSettings" !
+Files in project we can find:
+XML_Exim.cs 
+LightingPanel.xaml 
+Lighting.xaml.cs 
+DBReader.cs
+SettingsWin.xaml.cs 
+PPLightControl.xaml.cs 
+RW_DBSettings.cpp
+
+now lets look ALL these files and find out what going to be possible.
+
+First: XML_Exim.csNow actually we find the table name commented over here.
+Sow lets quickly find out what it is doing and move to second.
+//String[] TableNames = new string[] {"UserSettings", "DXFSettings", "MeasurementSettings", "LightingSettings", "FixtureDetails",
+        //                "MachineDetails", "VisionSettings", "MagLevels", "MagnifierSettings", 
+        //                "DROSettings", "EEPROMSettings","CalibrationSettings","FocusScanCalibration","CameraAxisValue"};
+        //List<string> TableNames = new List<string>();
+But this is all Comments.
+This File is actually doing something with the xml. 
+like CRUD operations and stuff like that.
+Since we have the file so that we can see the actuall database and I can sense the connection string over here.
+anyways we can do that later.
+
+Second:LightingPanel.Xaml
+Clearly this one is the designing for whatever it is for. Lets have a look.
+Thus file actually take care of designing the lighting thing responsible for the mouse drag and handle lighting accordingly.
+This Table "LightiningSettings" is not used here. its gere because of the regular expression.
+
+Third:LightingPanel.xaml.cs
+This is the file which have the logic responsible for whatever happening in the front end.
+-> lets see how the data is sending... I mean Imagine Since table is used over here hence consider
+it is taking the data from the database and how the data is being send anywhere after calulation means what computation 
+is done here with frontend user thing and where the data is send? 
+Thats the primary question !
+
+now in the same file we have the function init()
+and on the line 135. we have a line 
+System.Data.DataRow[] sdsd = GlobalSettings.SettingsReader.GetRowsAccordingToCurrentMachineNumber("LightingSettings"); //[0];
+ nud_Surface.Value = (int)sdsd[0][7];
+ nud_Profile.Value = (int)sdsd[0][8];
+First what is these nud_surface and nud_profile
+and why we are storing the values over there.
+The very first thing we have to look that what is DataRow.
+Since all the data let's say is coming to the sdsd.
+and Now the most Important question is how it works ? 
+Means nud_Surface.Value = (int)sdsd[0][7] ?
+Means this is the 2 Dimensional array means
+0th row and 7th column.
+same like nud_Profile.Value = (int)sdsd[0][8]
+
+
+-----> Now we have to find out also that what is stored at the place [0][7] and [0][8]
+
+//What is the btnOK_Click is doing 
+System.Data.DataRow[] sdsd = GlobalSettings.SettingsReader.GetRowsAccordingToCurrentMachineNumber("LightingSettings"); //[0];
+sdsd[0][7] = (int)nud_Surface.Value; sdsd[0][8] = (int)nud_Profile.Value;
+
+what is This save is actually doing because it is something updating the values back in the database as well.
+GlobalSettings.SettingsReader.UpdateTable("LightingSettings");
+gLightControl.Visibility = Visibility.Hidden;
+
+Fourth: DBReader.cs
+Lets hope as the name suggests that we are reading the database so somehow lets proceed further with that.
+
+this.Add_NewField("LightingSettings", "ProfileLightLevelFor11X", typeof(System.Int32), 1);
+                StageFinished = 33;
+
+                if (System.Environment.Is64BitOperatingSystem)
+                    this.Add_NewField("DefaultCamSettings", "RefDotCamSettings", typeof(System.String), "18C800608000608060604C");
+                else
+                    this.Add_NewField("DefaultCamSettings", "RefDotCamSettings", typeof(System.String), "58FF008001004C");
+
+This is doing the value or adding something here as well.
+
+
+and also it it is doing something like this as well.
+GlobalSettings.Light_Zone_Nos = new int[] { 4, 7, 5, 6 };
+try
+{
+GlobalSettings.Light_Zone_Nos[0] = Convert.ToInt32(Settings_DataB.Select_ChildControls("LightingSettings", "MachineNo", MachineNo)[0]["Profile_Zone_No"]);//4
+GlobalSettings.Light_Zone_Nos[1] = Convert.ToInt32(Settings_DataB.Select_ChildControls("LightingSettings", "MachineNo", MachineNo)[0]["Aux_Zone_No"]);//7
+GlobalSettings.Light_Zone_Nos[2] = Convert.ToInt32(Settings_DataB.Select_ChildControls("LightingSettings", "MachineNo", MachineNo)[0]["CoAx_ZoneNo"]);//5
+GlobalSettings.Light_Zone_Nos[3] = Convert.ToInt32(Settings_DataB.Select_ChildControls("LightingSettings", "MachineNo", MachineNo)[0]["Profile11X_Zone_No"]);//6
+}
+default is {4,7,5,6}
+we have the function 
+Update_or_Save_LightSettings(string LightName, int Lvals) Line 966
+I Guess there is a combobox 
+in the Lighting section which actually have all the lighting stuff.
+and we can add something by the save button and delete accordingly.
+so this function is doing something lets see...
+Now This Save and delete button is doing altogether different Thing.
+
+
+//Normally LightRow["zone7"] = 0;
+//lightRow["zone8"] = 0;
+
+there is one more function which actually is 
+public void Select_LightSettings(string LightName) Line number 998
+parameter : LightName
+
+This function is actually used to get the value from the combobox and thus lights up the values which are actually selected.
+and 
+this is not helping for the thing which we are looking for.
+
+Fifth:SettingsWin.xaml.cs
+so somehow helping the settingsWin.xaml.
+
+we have the functin
+void TabVideoAndCameraSettingsUpdate()
+{
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["LightValue"] = LightValueTxtBx.Text;
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Profile_Zone_No"] = txtProfileZone.Text;
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Aux_Zone_No"] = txtAuxiliary.Text;
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Profile11X_Zone_No"] = txt11XProfile.Text;
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["CoAx_ZoneNo"] = txtCoAxial.Text;
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["ProfileLightLevelFor11X"] = txtProfileLightAt11X.Text;
+
+ try
+   {
+   CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone1_No"] = txtSurfaceZ1.Text;
+   CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone2_No"] = txtSurfaceZ2.Text;
+   CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone3_No"] = txtSurfaceZ3.Text;
+   CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone4_No"] = txtSurfaceZ4.Text;
+    }
+    catch (Exception exxx)
+     { }	
+}
+Means this is actually filling the value of textbox into the database.
+Sixth:PPLightControl.xaml.cs 
+I don't thinl there is something which can be help
+
+Seventh:RW_DBSettings.cpp
+this is cpp file, which lets say what it actually do.
+
+______________________________________________________________________________________________________________________
+Now the data that textbox we have something like that.
+this is actually filling the box from the database
+FillTextBox(txtSurfaceZ1, "LightingSettings", "MachineNo", MachineNo, "Zone1_No", true);
+and this is for updating
+CurrentMachineDataR[UpdateTableIndex("LightingSettings")]["Zone1_No"] = txtSurfaceZ1.Text;
+---------------------------------------------------------------------------------------------------------------------
+
+if (GlobalSettings.Light_Zone_Nos[0] + 1 <= 8)
+MyLighting.TotalCircles = 2;
