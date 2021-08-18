@@ -1,1 +1,36 @@
-//Data Data Data
+CApCam::CApCam(IUnknown *pUnk, HRESULT *phr)
+           : CSource(NAME("ApCam Filter"), pUnk, CLSID_ApCPS1)
+{
+    // The pin magically adds itself to our pin array.
+    m_pPin_Full = new CApCamOutPin(phr, this);
+	m_pPin_Full->IsPreviewPin = true;
+    
+	//m_pPin_Preview = new CApCamOutPin(phr, this);
+	//m_pPin_Preview->IsPreviewPin = true;
+
+	//Try to see if aptina Cam is present
+	LPCTSTR lpApCam = L"MI_HOME";
+	LPTSTR lpBufferTarget = new TCHAR[200];
+	DWORD bufSize = 0;
+	int bsize = GetEnvironmentVariable(lpApCam, lpBufferTarget, bufSize);
+	if (bsize > 0)
+	{	//AptinaCam is installed in this computer. So let us check if ApCam is connected!
+		ApS = new AptinaSensor4_Api();
+		//bool rr = ApS->fnOpenCamera(1, true);
+		////FirstTimeGetType = true;
+		//if (!rr) 
+		//{	*phr = E_FAIL;
+		//	return;
+		//}
+		//ApS->fnCloseCamera();
+	}
+	
+
+    if ( SUCCEEDED(*phr))
+    {
+        if (m_pPin_Full == NULL || m_pPin_Preview == NULL)
+            *phr = E_OUTOFMEMORY;
+        else
+            *phr = S_OK;
+    }  
+}
